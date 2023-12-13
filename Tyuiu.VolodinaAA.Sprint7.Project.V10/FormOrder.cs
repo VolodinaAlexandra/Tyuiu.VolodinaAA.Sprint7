@@ -16,8 +16,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         public FormOrder()
         {
             InitializeComponent();
-        }
 
+            comboBoxTowns_VAA.SelectedIndexChanged += comboBoxTowns_VAA_SelectedIndexChanged;
+        }
+        void comboBoxTowns_VAA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedState = comboBoxTowns_VAA.SelectedItem.ToString();
+            MessageBox.Show(selectedState);
+        }
         private void buttonNext_VAA_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите сохранить ваши данные?", "!", MessageBoxButtons.YesNoCancel);
@@ -36,13 +42,19 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                     string name = textBoxName_VAA.Text;
                     string patronymic = textBoxPatronymic_VAA.Text;
                     string phoneNumber = maskedTextBoxPhoneNumber_VAA.Text;
-                    string data = $"{surname};{name};{patronymic};{phoneNumber}";
+                    string selectedState = comboBoxTowns_VAA.SelectedItem.ToString();
+                    string data = $"{surname};{name};{patronymic};{phoneNumber};{selectedState}";
                     streamWriter.WriteLine(data);
                     streamWriter.Close();
                 }
                 
 
             }
+        }
+
+        private void checkBoxCondition_VAA_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonNext_VAA.Enabled = true;
         }
     }
 }

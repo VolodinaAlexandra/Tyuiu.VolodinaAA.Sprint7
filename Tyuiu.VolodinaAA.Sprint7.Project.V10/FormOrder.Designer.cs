@@ -44,6 +44,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.textBoxExplanation_VAA = new System.Windows.Forms.TextBox();
             this.openFileDialogNext_VAA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogCSV_VAA = new System.Windows.Forms.SaveFileDialog();
+            this.checkBoxCondition_VAA = new System.Windows.Forms.CheckBox();
+            this.comboBoxTowns_VAA = new System.Windows.Forms.ComboBox();
+            this.labelTowns_VAA = new System.Windows.Forms.Label();
             this.panelRight_VAA.SuspendLayout();
             this.panelFill_VAA.SuspendLayout();
             this.panelTop_VAA.SuspendLayout();
@@ -61,6 +64,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonNext_VAA
             // 
+            this.buttonNext_VAA.Enabled = false;
             this.buttonNext_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNext_VAA.Location = new System.Drawing.Point(15, 477);
             this.buttonNext_VAA.Name = "buttonNext_VAA";
@@ -73,6 +77,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // panelFill_VAA
             // 
             this.panelFill_VAA.BackColor = System.Drawing.SystemColors.Window;
+            this.panelFill_VAA.Controls.Add(this.labelTowns_VAA);
+            this.panelFill_VAA.Controls.Add(this.comboBoxTowns_VAA);
+            this.panelFill_VAA.Controls.Add(this.checkBoxCondition_VAA);
             this.panelFill_VAA.Controls.Add(this.labelPhoneNumber_VAA);
             this.panelFill_VAA.Controls.Add(this.maskedTextBoxPhoneNumber_VAA);
             this.panelFill_VAA.Controls.Add(this.textBoxPatronymic_VAA);
@@ -111,7 +118,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.textBoxPatronymic_VAA.Location = new System.Drawing.Point(66, 291);
             this.textBoxPatronymic_VAA.Name = "textBoxPatronymic_VAA";
-            this.textBoxPatronymic_VAA.Size = new System.Drawing.Size(459, 22);
+            this.textBoxPatronymic_VAA.Size = new System.Drawing.Size(412, 22);
             this.textBoxPatronymic_VAA.TabIndex = 6;
             // 
             // labelPatronymic_VAA
@@ -138,7 +145,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.textBoxName_VAA.Location = new System.Drawing.Point(66, 222);
             this.textBoxName_VAA.Name = "textBoxName_VAA";
-            this.textBoxName_VAA.Size = new System.Drawing.Size(459, 22);
+            this.textBoxName_VAA.Size = new System.Drawing.Size(412, 22);
             this.textBoxName_VAA.TabIndex = 3;
             // 
             // labelSurname_VAA
@@ -155,7 +162,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.textBoxSurname_VAA.Location = new System.Drawing.Point(66, 149);
             this.textBoxSurname_VAA.Name = "textBoxSurname_VAA";
-            this.textBoxSurname_VAA.Size = new System.Drawing.Size(459, 22);
+            this.textBoxSurname_VAA.Size = new System.Drawing.Size(412, 22);
             this.textBoxSurname_VAA.TabIndex = 1;
             // 
             // panelTop_VAA
@@ -182,6 +189,41 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // openFileDialogNext_VAA
             // 
             this.openFileDialogNext_VAA.FileName = "openFileDialog1";
+            // 
+            // checkBoxCondition_VAA
+            // 
+            this.checkBoxCondition_VAA.AutoSize = true;
+            this.checkBoxCondition_VAA.Location = new System.Drawing.Point(66, 453);
+            this.checkBoxCondition_VAA.Name = "checkBoxCondition_VAA";
+            this.checkBoxCondition_VAA.Size = new System.Drawing.Size(401, 21);
+            this.checkBoxCondition_VAA.TabIndex = 9;
+            this.checkBoxCondition_VAA.Text = "Вы согласны на обработку ваших персональных данных\r\n";
+            this.checkBoxCondition_VAA.UseVisualStyleBackColor = true;
+            this.checkBoxCondition_VAA.CheckedChanged += new System.EventHandler(this.checkBoxCondition_VAA_CheckedChanged);
+            // 
+            // comboBoxTowns_VAA
+            // 
+            this.comboBoxTowns_VAA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTowns_VAA.FormattingEnabled = true;
+            this.comboBoxTowns_VAA.Items.AddRange(new object[] {
+            "Тюмень",
+            "Москва",
+            "Санкт-Петербург",
+            "Екатеринбург"});
+            this.comboBoxTowns_VAA.Location = new System.Drawing.Point(612, 220);
+            this.comboBoxTowns_VAA.Name = "comboBoxTowns_VAA";
+            this.comboBoxTowns_VAA.Size = new System.Drawing.Size(190, 24);
+            this.comboBoxTowns_VAA.TabIndex = 10;
+            // 
+            // labelTowns_VAA
+            // 
+            this.labelTowns_VAA.AutoSize = true;
+            this.labelTowns_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTowns_VAA.Location = new System.Drawing.Point(608, 169);
+            this.labelTowns_VAA.Name = "labelTowns_VAA";
+            this.labelTowns_VAA.Size = new System.Drawing.Size(248, 48);
+            this.labelTowns_VAA.TabIndex = 11;
+            this.labelTowns_VAA.Text = "Выберите населённый\r\nпункт:";
             // 
             // FormOrder
             // 
@@ -219,5 +261,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPhoneNumber_VAA;
         private System.Windows.Forms.OpenFileDialog openFileDialogNext_VAA;
         private System.Windows.Forms.SaveFileDialog saveFileDialogCSV_VAA;
+        private System.Windows.Forms.CheckBox checkBoxCondition_VAA;
+        private System.Windows.Forms.Label labelTowns_VAA;
+        private System.Windows.Forms.ComboBox comboBoxTowns_VAA;
     }
 }
