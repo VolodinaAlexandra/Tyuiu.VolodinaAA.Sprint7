@@ -32,5 +32,17 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         {
             buttonGoToOrder_VAA.BackColor = Color.White;
         }
+
+        private void buttonInformation_VAA_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
+
+        private void buttonInstruction_VAA_Click(object sender, EventArgs e)
+        {
+            FormInstruction formInstruction = new FormInstruction();
+            formInstruction.ShowDialog();
+        }
     }
 }

@@ -32,16 +32,18 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelRight_VAA = new System.Windows.Forms.Panel();
             this.buttonNext_VAA = new System.Windows.Forms.Button();
             this.panelFill_VAA = new System.Windows.Forms.Panel();
+            this.labelPhoneNumber_VAA = new System.Windows.Forms.Label();
+            this.maskedTextBoxPhoneNumber_VAA = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxPatronymic_VAA = new System.Windows.Forms.TextBox();
+            this.labelPatronymic_VAA = new System.Windows.Forms.Label();
+            this.labelName_VAA = new System.Windows.Forms.Label();
+            this.textBoxName_VAA = new System.Windows.Forms.TextBox();
             this.labelSurname_VAA = new System.Windows.Forms.Label();
             this.textBoxSurname_VAA = new System.Windows.Forms.TextBox();
             this.panelTop_VAA = new System.Windows.Forms.Panel();
             this.textBoxExplanation_VAA = new System.Windows.Forms.TextBox();
-            this.textBoxName_VAA = new System.Windows.Forms.TextBox();
-            this.labelName_VAA = new System.Windows.Forms.Label();
-            this.labelPatronymic_VAA = new System.Windows.Forms.Label();
-            this.textBoxPatronymic_VAA = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxPhoneNumber_VAA = new System.Windows.Forms.MaskedTextBox();
-            this.labelPhoneNumber_VAA = new System.Windows.Forms.Label();
+            this.openFileDialogNext_VAA = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialogCSV_VAA = new System.Windows.Forms.SaveFileDialog();
             this.panelRight_VAA.SuspendLayout();
             this.panelFill_VAA.SuspendLayout();
             this.panelTop_VAA.SuspendLayout();
@@ -59,12 +61,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonNext_VAA
             // 
+            this.buttonNext_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNext_VAA.Location = new System.Drawing.Point(15, 477);
             this.buttonNext_VAA.Name = "buttonNext_VAA";
             this.buttonNext_VAA.Size = new System.Drawing.Size(171, 53);
             this.buttonNext_VAA.TabIndex = 0;
             this.buttonNext_VAA.Text = "Продолжить";
             this.buttonNext_VAA.UseVisualStyleBackColor = true;
+            this.buttonNext_VAA.Click += new System.EventHandler(this.buttonNext_VAA_Click);
             // 
             // panelFill_VAA
             // 
@@ -83,6 +87,59 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelFill_VAA.Name = "panelFill_VAA";
             this.panelFill_VAA.Size = new System.Drawing.Size(933, 549);
             this.panelFill_VAA.TabIndex = 1;
+            // 
+            // labelPhoneNumber_VAA
+            // 
+            this.labelPhoneNumber_VAA.AutoSize = true;
+            this.labelPhoneNumber_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPhoneNumber_VAA.Location = new System.Drawing.Point(62, 335);
+            this.labelPhoneNumber_VAA.Name = "labelPhoneNumber_VAA";
+            this.labelPhoneNumber_VAA.Size = new System.Drawing.Size(185, 48);
+            this.labelPhoneNumber_VAA.TabIndex = 8;
+            this.labelPhoneNumber_VAA.Text = "Введите ваш \r\nномер телефона:";
+            // 
+            // maskedTextBoxPhoneNumber_VAA
+            // 
+            this.maskedTextBoxPhoneNumber_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBoxPhoneNumber_VAA.Location = new System.Drawing.Point(66, 386);
+            this.maskedTextBoxPhoneNumber_VAA.Mask = "+7(999) 000-0000";
+            this.maskedTextBoxPhoneNumber_VAA.Name = "maskedTextBoxPhoneNumber_VAA";
+            this.maskedTextBoxPhoneNumber_VAA.Size = new System.Drawing.Size(197, 31);
+            this.maskedTextBoxPhoneNumber_VAA.TabIndex = 7;
+            // 
+            // textBoxPatronymic_VAA
+            // 
+            this.textBoxPatronymic_VAA.Location = new System.Drawing.Point(66, 291);
+            this.textBoxPatronymic_VAA.Name = "textBoxPatronymic_VAA";
+            this.textBoxPatronymic_VAA.Size = new System.Drawing.Size(459, 22);
+            this.textBoxPatronymic_VAA.TabIndex = 6;
+            // 
+            // labelPatronymic_VAA
+            // 
+            this.labelPatronymic_VAA.AutoSize = true;
+            this.labelPatronymic_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPatronymic_VAA.Location = new System.Drawing.Point(66, 264);
+            this.labelPatronymic_VAA.Name = "labelPatronymic_VAA";
+            this.labelPatronymic_VAA.Size = new System.Drawing.Size(412, 24);
+            this.labelPatronymic_VAA.TabIndex = 5;
+            this.labelPatronymic_VAA.Text = "Введите ваше отчество (при наличии):\r\n";
+            // 
+            // labelName_VAA
+            // 
+            this.labelName_VAA.AutoSize = true;
+            this.labelName_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelName_VAA.Location = new System.Drawing.Point(66, 195);
+            this.labelName_VAA.Name = "labelName_VAA";
+            this.labelName_VAA.Size = new System.Drawing.Size(284, 24);
+            this.labelName_VAA.TabIndex = 4;
+            this.labelName_VAA.Text = "Введите ваше полное имя:\r\n";
+            // 
+            // textBoxName_VAA
+            // 
+            this.textBoxName_VAA.Location = new System.Drawing.Point(66, 222);
+            this.textBoxName_VAA.Name = "textBoxName_VAA";
+            this.textBoxName_VAA.Size = new System.Drawing.Size(459, 22);
+            this.textBoxName_VAA.TabIndex = 3;
             // 
             // labelSurname_VAA
             // 
@@ -122,58 +179,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.textBoxExplanation_VAA.TabIndex = 0;
             this.textBoxExplanation_VAA.Text = "Для продолжения совершения заказа заполните следующие поля:";
             // 
-            // textBoxName_VAA
+            // openFileDialogNext_VAA
             // 
-            this.textBoxName_VAA.Location = new System.Drawing.Point(66, 222);
-            this.textBoxName_VAA.Name = "textBoxName_VAA";
-            this.textBoxName_VAA.Size = new System.Drawing.Size(459, 22);
-            this.textBoxName_VAA.TabIndex = 3;
-            // 
-            // labelName_VAA
-            // 
-            this.labelName_VAA.AutoSize = true;
-            this.labelName_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName_VAA.Location = new System.Drawing.Point(66, 195);
-            this.labelName_VAA.Name = "labelName_VAA";
-            this.labelName_VAA.Size = new System.Drawing.Size(284, 24);
-            this.labelName_VAA.TabIndex = 4;
-            this.labelName_VAA.Text = "Введите ваше полное имя:\r\n";
-            // 
-            // labelPatronymic_VAA
-            // 
-            this.labelPatronymic_VAA.AutoSize = true;
-            this.labelPatronymic_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPatronymic_VAA.Location = new System.Drawing.Point(66, 264);
-            this.labelPatronymic_VAA.Name = "labelPatronymic_VAA";
-            this.labelPatronymic_VAA.Size = new System.Drawing.Size(412, 24);
-            this.labelPatronymic_VAA.TabIndex = 5;
-            this.labelPatronymic_VAA.Text = "Введите ваше отчество (при наличии):\r\n";
-            // 
-            // textBoxPatronymic_VAA
-            // 
-            this.textBoxPatronymic_VAA.Location = new System.Drawing.Point(66, 291);
-            this.textBoxPatronymic_VAA.Name = "textBoxPatronymic_VAA";
-            this.textBoxPatronymic_VAA.Size = new System.Drawing.Size(459, 22);
-            this.textBoxPatronymic_VAA.TabIndex = 6;
-            // 
-            // maskedTextBoxPhoneNumber_VAA
-            // 
-            this.maskedTextBoxPhoneNumber_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBoxPhoneNumber_VAA.Location = new System.Drawing.Point(66, 386);
-            this.maskedTextBoxPhoneNumber_VAA.Mask = "+7(999) 000-0000";
-            this.maskedTextBoxPhoneNumber_VAA.Name = "maskedTextBoxPhoneNumber_VAA";
-            this.maskedTextBoxPhoneNumber_VAA.Size = new System.Drawing.Size(197, 31);
-            this.maskedTextBoxPhoneNumber_VAA.TabIndex = 7;
-            // 
-            // labelPhoneNumber_VAA
-            // 
-            this.labelPhoneNumber_VAA.AutoSize = true;
-            this.labelPhoneNumber_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPhoneNumber_VAA.Location = new System.Drawing.Point(62, 335);
-            this.labelPhoneNumber_VAA.Name = "labelPhoneNumber_VAA";
-            this.labelPhoneNumber_VAA.Size = new System.Drawing.Size(185, 48);
-            this.labelPhoneNumber_VAA.TabIndex = 8;
-            this.labelPhoneNumber_VAA.Text = "Введите ваш \r\nномер телефона:";
+            this.openFileDialogNext_VAA.FileName = "openFileDialog1";
             // 
             // FormOrder
             // 
@@ -209,5 +217,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.TextBox textBoxName_VAA;
         private System.Windows.Forms.Label labelPhoneNumber_VAA;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPhoneNumber_VAA;
+        private System.Windows.Forms.OpenFileDialog openFileDialogNext_VAA;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogCSV_VAA;
     }
 }
