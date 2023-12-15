@@ -44,5 +44,11 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             FormInstruction formInstruction = new FormInstruction();
             formInstruction.ShowDialog();
         }
+
+        private void buttonStatistic_VAA_Click(object sender, EventArgs e)
+        {
+            FormStatistic formStatistic = new FormStatistic();
+            formStatistic.ShowDialog();
+        }
     }
 }

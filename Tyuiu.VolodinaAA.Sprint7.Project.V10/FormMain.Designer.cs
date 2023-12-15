@@ -33,6 +33,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelRight_VAA = new System.Windows.Forms.Panel();
             this.buttonInstruction_VAA = new System.Windows.Forms.Button();
             this.buttonInformation_VAA = new System.Windows.Forms.Button();
+            this.buttonStatistic_VAA = new System.Windows.Forms.Button();
             this.panelRight_VAA.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonGoToOrder_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonGoToOrder_VAA.BackColor = System.Drawing.SystemColors.Control;
             this.buttonGoToOrder_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonGoToOrder_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonGoToOrder_VAA.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonGoToOrder_VAA.Location = new System.Drawing.Point(17, 437);
             this.buttonGoToOrder_VAA.Name = "buttonGoToOrder_VAA";
@@ -55,6 +57,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // panelRight_VAA
             // 
             this.panelRight_VAA.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelRight_VAA.Controls.Add(this.buttonStatistic_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonInstruction_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonInformation_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonGoToOrder_VAA);
@@ -67,6 +70,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // buttonInstruction_VAA
             // 
             this.buttonInstruction_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonInstruction_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonInstruction_VAA.Location = new System.Drawing.Point(17, 12);
             this.buttonInstruction_VAA.Name = "buttonInstruction_VAA";
             this.buttonInstruction_VAA.Size = new System.Drawing.Size(171, 42);
@@ -78,6 +82,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // buttonInformation_VAA
             // 
             this.buttonInformation_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonInformation_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonInformation_VAA.Location = new System.Drawing.Point(17, 60);
             this.buttonInformation_VAA.Name = "buttonInformation_VAA";
             this.buttonInformation_VAA.Size = new System.Drawing.Size(171, 38);
@@ -85,6 +90,18 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonInformation_VAA.Text = "О программе";
             this.buttonInformation_VAA.UseVisualStyleBackColor = true;
             this.buttonInformation_VAA.Click += new System.EventHandler(this.buttonInformation_VAA_Click);
+            // 
+            // buttonStatistic_VAA
+            // 
+            this.buttonStatistic_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonStatistic_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStatistic_VAA.Location = new System.Drawing.Point(17, 105);
+            this.buttonStatistic_VAA.Name = "buttonStatistic_VAA";
+            this.buttonStatistic_VAA.Size = new System.Drawing.Size(171, 60);
+            this.buttonStatistic_VAA.TabIndex = 2;
+            this.buttonStatistic_VAA.Text = "Просмотреть статистику приложения";
+            this.buttonStatistic_VAA.UseVisualStyleBackColor = true;
+            this.buttonStatistic_VAA.Click += new System.EventHandler(this.buttonStatistic_VAA_Click);
             // 
             // FormMain
             // 
@@ -106,6 +123,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.Panel panelRight_VAA;
         private System.Windows.Forms.Button buttonInstruction_VAA;
         private System.Windows.Forms.Button buttonInformation_VAA;
+        private System.Windows.Forms.Button buttonStatistic_VAA;
     }
 }
 
