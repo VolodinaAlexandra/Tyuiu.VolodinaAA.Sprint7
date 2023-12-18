@@ -72,11 +72,11 @@
     <Compile Include="FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOrderInfo.cs">
+    <Compile Include="FormAuthorise.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOrderInfo.Designer.cs">
-      <DependentUpon>FormOrderInfo.cs</DependentUpon>
+    <Compile Include="FormAuthorise.Designer.cs">
+      <DependentUpon>FormAuthorise.cs</DependentUpon>
     </Compile>
     <Compile Include="FormStatistic.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOrderInfo.resx">
-      <DependentUpon>FormOrderInfo.cs</DependentUpon>
+    <EmbeddedResource Include="FormAuthorise.resx">
+      <DependentUpon>FormAuthorise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStatistic.resx">
       <DependentUpon>FormStatistic.cs</DependentUpon>

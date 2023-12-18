@@ -30,8 +30,13 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private void InitializeComponent()
         {
             this.panelRight_VAA = new System.Windows.Forms.Panel();
-            this.buttonNext_VAA = new System.Windows.Forms.Button();
+            this.buttonGoBack_VAA = new System.Windows.Forms.Button();
+            this.buttonEnd_VAA = new System.Windows.Forms.Button();
             this.panelFill_VAA = new System.Windows.Forms.Panel();
+            this.labelAdress_VAA = new System.Windows.Forms.Label();
+            this.textBoxAdress_VAA = new System.Windows.Forms.TextBox();
+            this.labelPostIndex_VAA = new System.Windows.Forms.Label();
+            this.textBoxPostIndex_VAA = new System.Windows.Forms.TextBox();
             this.labelTowns_VAA = new System.Windows.Forms.Label();
             this.comboBoxTowns_VAA = new System.Windows.Forms.ComboBox();
             this.checkBoxCondition_VAA = new System.Windows.Forms.CheckBox();
@@ -47,11 +52,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.textBoxExplanation_VAA = new System.Windows.Forms.TextBox();
             this.openFileDialogNext_VAA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogCSV_VAA = new System.Windows.Forms.SaveFileDialog();
-            this.buttonGoBack_VAA = new System.Windows.Forms.Button();
-            this.textBoxPostIndex_VAA = new System.Windows.Forms.TextBox();
-            this.labelPostIndex_VAA = new System.Windows.Forms.Label();
-            this.textBoxAdress_VAA = new System.Windows.Forms.TextBox();
-            this.labelAdress_VAA = new System.Windows.Forms.Label();
             this.panelRight_VAA.SuspendLayout();
             this.panelFill_VAA.SuspendLayout();
             this.panelTop_VAA.SuspendLayout();
@@ -61,25 +61,37 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.panelRight_VAA.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelRight_VAA.Controls.Add(this.buttonGoBack_VAA);
-            this.panelRight_VAA.Controls.Add(this.buttonNext_VAA);
+            this.panelRight_VAA.Controls.Add(this.buttonEnd_VAA);
             this.panelRight_VAA.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRight_VAA.Location = new System.Drawing.Point(933, 0);
             this.panelRight_VAA.Name = "panelRight_VAA";
             this.panelRight_VAA.Size = new System.Drawing.Size(200, 549);
             this.panelRight_VAA.TabIndex = 0;
             // 
-            // buttonNext_VAA
+            // buttonGoBack_VAA
             // 
-            this.buttonNext_VAA.Enabled = false;
-            this.buttonNext_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNext_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNext_VAA.Location = new System.Drawing.Point(15, 477);
-            this.buttonNext_VAA.Name = "buttonNext_VAA";
-            this.buttonNext_VAA.Size = new System.Drawing.Size(171, 53);
-            this.buttonNext_VAA.TabIndex = 0;
-            this.buttonNext_VAA.Text = "Продолжить";
-            this.buttonNext_VAA.UseVisualStyleBackColor = true;
-            this.buttonNext_VAA.Click += new System.EventHandler(this.buttonNext_VAA_Click);
+            this.buttonGoBack_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonGoBack_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonGoBack_VAA.Location = new System.Drawing.Point(29, 12);
+            this.buttonGoBack_VAA.Name = "buttonGoBack_VAA";
+            this.buttonGoBack_VAA.Size = new System.Drawing.Size(148, 64);
+            this.buttonGoBack_VAA.TabIndex = 1;
+            this.buttonGoBack_VAA.Text = "Вернуться на предыдущую страницу";
+            this.buttonGoBack_VAA.UseVisualStyleBackColor = true;
+            this.buttonGoBack_VAA.Click += new System.EventHandler(this.buttonGoBack_VAA_Click);
+            // 
+            // buttonEnd_VAA
+            // 
+            this.buttonEnd_VAA.Enabled = false;
+            this.buttonEnd_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonEnd_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEnd_VAA.Location = new System.Drawing.Point(15, 477);
+            this.buttonEnd_VAA.Name = "buttonEnd_VAA";
+            this.buttonEnd_VAA.Size = new System.Drawing.Size(171, 53);
+            this.buttonEnd_VAA.TabIndex = 0;
+            this.buttonEnd_VAA.Text = "Завершить регистрацию";
+            this.buttonEnd_VAA.UseVisualStyleBackColor = true;
+            this.buttonEnd_VAA.Click += new System.EventHandler(this.buttonNext_VAA_Click);
             // 
             // panelFill_VAA
             // 
@@ -105,6 +117,41 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelFill_VAA.Name = "panelFill_VAA";
             this.panelFill_VAA.Size = new System.Drawing.Size(933, 549);
             this.panelFill_VAA.TabIndex = 1;
+            // 
+            // labelAdress_VAA
+            // 
+            this.labelAdress_VAA.AutoSize = true;
+            this.labelAdress_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAdress_VAA.Location = new System.Drawing.Point(331, 335);
+            this.labelAdress_VAA.Name = "labelAdress_VAA";
+            this.labelAdress_VAA.Size = new System.Drawing.Size(212, 48);
+            this.labelAdress_VAA.TabIndex = 16;
+            this.labelAdress_VAA.Text = "Введите ваш \r\nадрес проживания:";
+            // 
+            // textBoxAdress_VAA
+            // 
+            this.textBoxAdress_VAA.Location = new System.Drawing.Point(335, 386);
+            this.textBoxAdress_VAA.Multiline = true;
+            this.textBoxAdress_VAA.Name = "textBoxAdress_VAA";
+            this.textBoxAdress_VAA.Size = new System.Drawing.Size(419, 31);
+            this.textBoxAdress_VAA.TabIndex = 14;
+            // 
+            // labelPostIndex_VAA
+            // 
+            this.labelPostIndex_VAA.AutoSize = true;
+            this.labelPostIndex_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPostIndex_VAA.Location = new System.Drawing.Point(563, 240);
+            this.labelPostIndex_VAA.Name = "labelPostIndex_VAA";
+            this.labelPostIndex_VAA.Size = new System.Drawing.Size(191, 48);
+            this.labelPostIndex_VAA.TabIndex = 13;
+            this.labelPostIndex_VAA.Text = "Введите ваш \r\nпочтовый индекс:\r\n";
+            // 
+            // textBoxPostIndex_VAA
+            // 
+            this.textBoxPostIndex_VAA.Location = new System.Drawing.Point(564, 291);
+            this.textBoxPostIndex_VAA.Name = "textBoxPostIndex_VAA";
+            this.textBoxPostIndex_VAA.Size = new System.Drawing.Size(190, 22);
+            this.textBoxPostIndex_VAA.TabIndex = 12;
             // 
             // labelTowns_VAA
             // 
@@ -555,53 +602,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.openFileDialogNext_VAA.FileName = "openFileDialog1";
             // 
-            // buttonGoBack_VAA
-            // 
-            this.buttonGoBack_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonGoBack_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonGoBack_VAA.Location = new System.Drawing.Point(29, 12);
-            this.buttonGoBack_VAA.Name = "buttonGoBack_VAA";
-            this.buttonGoBack_VAA.Size = new System.Drawing.Size(148, 64);
-            this.buttonGoBack_VAA.TabIndex = 1;
-            this.buttonGoBack_VAA.Text = "Вернуться на предыдущую страницу";
-            this.buttonGoBack_VAA.UseVisualStyleBackColor = true;
-            this.buttonGoBack_VAA.Click += new System.EventHandler(this.buttonGoBack_VAA_Click);
-            // 
-            // textBoxPostIndex_VAA
-            // 
-            this.textBoxPostIndex_VAA.Location = new System.Drawing.Point(564, 291);
-            this.textBoxPostIndex_VAA.Name = "textBoxPostIndex_VAA";
-            this.textBoxPostIndex_VAA.Size = new System.Drawing.Size(190, 22);
-            this.textBoxPostIndex_VAA.TabIndex = 12;
-            // 
-            // labelPostIndex_VAA
-            // 
-            this.labelPostIndex_VAA.AutoSize = true;
-            this.labelPostIndex_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPostIndex_VAA.Location = new System.Drawing.Point(563, 240);
-            this.labelPostIndex_VAA.Name = "labelPostIndex_VAA";
-            this.labelPostIndex_VAA.Size = new System.Drawing.Size(191, 48);
-            this.labelPostIndex_VAA.TabIndex = 13;
-            this.labelPostIndex_VAA.Text = "Введите ваш \r\nпочтовый индекс:\r\n";
-            // 
-            // textBoxAdress_VAA
-            // 
-            this.textBoxAdress_VAA.Location = new System.Drawing.Point(335, 386);
-            this.textBoxAdress_VAA.Multiline = true;
-            this.textBoxAdress_VAA.Name = "textBoxAdress_VAA";
-            this.textBoxAdress_VAA.Size = new System.Drawing.Size(419, 31);
-            this.textBoxAdress_VAA.TabIndex = 14;
-            // 
-            // labelAdress_VAA
-            // 
-            this.labelAdress_VAA.AutoSize = true;
-            this.labelAdress_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAdress_VAA.Location = new System.Drawing.Point(331, 335);
-            this.labelAdress_VAA.Name = "labelAdress_VAA";
-            this.labelAdress_VAA.Size = new System.Drawing.Size(212, 48);
-            this.labelAdress_VAA.TabIndex = 16;
-            this.labelAdress_VAA.Text = "Введите ваш \r\nадрес проживания:";
-            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -624,7 +624,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         #endregion
 
         private System.Windows.Forms.Panel panelRight_VAA;
-        private System.Windows.Forms.Button buttonNext_VAA;
+        private System.Windows.Forms.Button buttonEnd_VAA;
         private System.Windows.Forms.Panel panelFill_VAA;
         private System.Windows.Forms.Panel panelTop_VAA;
         private System.Windows.Forms.TextBox textBoxExplanation_VAA;

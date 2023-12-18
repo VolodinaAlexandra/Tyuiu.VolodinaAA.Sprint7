@@ -17,20 +17,15 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             InitializeComponent();
         }
 
-        private void buttonGoToOrder_VAA_Click(object sender, EventArgs e)
-        {
-            FormOrder formOrder = new FormOrder();
-            formOrder.ShowDialog();
-        }
 
         private void buttonGoToOrder_VAA_MouseEnter(object sender, EventArgs e)
         {
-            buttonGoToOrder_VAA.BackColor = Color.AliceBlue;
+            buttonBuy_VAA.BackColor = Color.AliceBlue;
         }
 
         private void buttonGoToOrder_VAA_MouseLeave(object sender, EventArgs e)
         {
-            buttonGoToOrder_VAA.BackColor = Color.White;
+            buttonBuy_VAA.BackColor = Color.White;
         }
 
         private void buttonInformation_VAA_Click(object sender, EventArgs e)
@@ -49,6 +44,12 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         {
             FormStatistic formStatistic = new FormStatistic();
             formStatistic.ShowDialog();
+        }
+
+        private void buttonAuthorise_VAA_Click(object sender, EventArgs e)
+        {
+            FormAuthorise formAuthorise = new FormAuthorise();
+            formAuthorise.ShowDialog();
         }
     }
 }

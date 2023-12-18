@@ -26,12 +26,12 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         }
         private void buttonNext_VAA_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите сохранить ваши данные?", "!", MessageBoxButtons.YesNoCancel);
+            DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите сохранить ваши данные?", "!", MessageBoxButtons.OKCancel);
 
-            if (dialogResult == DialogResult.Yes)
+            if (dialogResult == DialogResult.OK)
             {
                 
-                FormOrderInfo formOrderInfo = new FormOrderInfo();
+                FormAuthorise formOrderInfo = new FormAuthorise();
                 formOrderInfo.ShowDialog();
 
                 string path = $@"{Directory.GetCurrentDirectory()}\Данные Пользователей.csv";
@@ -49,20 +49,22 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                     streamWriter.WriteLine(data);
                     streamWriter.Close();
                 }
-                
+                FormMain formMain = new FormMain();
+                formMain.Show();
+                this.Hide();
 
             }
+
         }
 
         private void checkBoxCondition_VAA_CheckedChanged(object sender, EventArgs e)
         {
-            buttonNext_VAA.Enabled = true;
+            buttonEnd_VAA.Enabled = true;
         }
 
         private void buttonGoBack_VAA_Click(object sender, EventArgs e)
         {
-            FormMain formMain = new FormMain();
-            formMain.ShowDialog();
+            this.Close();
         }
     }
 }
