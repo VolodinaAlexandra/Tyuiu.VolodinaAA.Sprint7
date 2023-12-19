@@ -51,5 +51,11 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             FormAuthorise formAuthorise = new FormAuthorise();
             formAuthorise.ShowDialog();
         }
+
+        private void buttonBuy_VAA_Click(object sender, EventArgs e)
+        {
+            FormPersonalCabinet personalCabinet = new FormPersonalCabinet();
+            personalCabinet.ShowDialog();
+        }
     }
 }

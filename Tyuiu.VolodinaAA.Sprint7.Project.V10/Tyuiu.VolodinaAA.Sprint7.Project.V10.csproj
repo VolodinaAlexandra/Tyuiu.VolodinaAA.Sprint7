@@ -78,6 +78,12 @@
     <Compile Include="FormAuthorise.Designer.cs">
       <DependentUpon>FormAuthorise.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPersonalCabinet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonalCabinet.Designer.cs">
+      <DependentUpon>FormPersonalCabinet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStatistic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAuthorise.resx">
       <DependentUpon>FormAuthorise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonalCabinet.resx">
+      <DependentUpon>FormPersonalCabinet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStatistic.resx">
       <DependentUpon>FormStatistic.cs</DependentUpon>

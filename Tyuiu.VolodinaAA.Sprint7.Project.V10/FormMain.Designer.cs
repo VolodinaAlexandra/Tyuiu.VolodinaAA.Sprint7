@@ -64,6 +64,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonBuy_VAA.Text = "Купить ёлочную игрушку";
             this.toolTipHelper_VAA.SetToolTip(this.buttonBuy_VAA, "Для перехода к личный кабинет необходимо авторизироваться!");
             this.buttonBuy_VAA.UseVisualStyleBackColor = false;
+            this.buttonBuy_VAA.Click += new System.EventHandler(this.buttonBuy_VAA_Click);
             this.buttonBuy_VAA.MouseEnter += new System.EventHandler(this.buttonGoToOrder_VAA_MouseEnter);
             this.buttonBuy_VAA.MouseLeave += new System.EventHandler(this.buttonGoToOrder_VAA_MouseLeave);
             // 
@@ -83,6 +84,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonAuthorise_VAA
             // 
+            this.buttonAuthorise_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAuthorise_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAuthorise_VAA.Location = new System.Drawing.Point(17, 385);
             this.buttonAuthorise_VAA.Name = "buttonAuthorise_VAA";
@@ -176,8 +178,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // labelTop_VAA
             // 
             this.labelTop_VAA.AutoSize = true;
+            this.labelTop_VAA.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelTop_VAA.Font = new System.Drawing.Font("TT Travels ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTop_VAA.Location = new System.Drawing.Point(12, 12);
+            this.labelTop_VAA.Location = new System.Drawing.Point(0, 0);
             this.labelTop_VAA.Name = "labelTop_VAA";
             this.labelTop_VAA.Size = new System.Drawing.Size(893, 108);
             this.labelTop_VAA.TabIndex = 0;
