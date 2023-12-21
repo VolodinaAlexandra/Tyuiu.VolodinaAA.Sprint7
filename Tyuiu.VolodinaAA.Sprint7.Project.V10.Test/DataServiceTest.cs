@@ -8,8 +8,16 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckSalesDataCollectionValid()
         {
+            SalesDataCollection sd = new SalesDataCollection();
+
+            var salesData = new SalesData { Month = "Май", Sales = 18 }; ;
+
+            Assert.IsNotNull(salesData);
+            Assert.AreEqual("Май", salesData.Month);
+            Assert.AreEqual(18, salesData.Sales);
         }
+
     }
 }
