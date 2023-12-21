@@ -21,20 +21,25 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
 
         private void buttonContinue_VAA_Click(object sender, EventArgs e)
         {
-            FormOrder formOrder = new FormOrder();
-            formOrder.ShowDialog();
-
-            string path = $@"{Directory.GetCurrentDirectory()}\Данные паролей.csv";
-
-            using (StreamWriter streamWriter = new StreamWriter(path, true, Encoding.Default))
+            DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите сохранить ваши данные?", "!", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
             {
-                string login = textBoxLogin_VAA.Text;
-                string password = textBoxPassword_VAA.Text;
-                string data = $"{login};{password}";
-                streamWriter.WriteLine(data);
-                streamWriter.Close();
+                string path = $@"{Directory.GetCurrentDirectory()}\Данные паролей.csv";
+
+                using (StreamWriter streamWriter = new StreamWriter(path, true, Encoding.Default))
+                {
+                    string login = textBoxLogin_VAA.Text;
+                    string password = textBoxPassword_VAA.Text;
+                    string data = $"{login};{password}";
+                    streamWriter.WriteLine(data);
+                    streamWriter.Close();
+                }
+                
+                FormOrder formOrder = new FormOrder();
+                formOrder.ShowDialog();
+                this.Close();
             }
-            this.Hide();
+
         }
 
         private void textBoxLogin_VAA_TextChanged(object sender, EventArgs e)

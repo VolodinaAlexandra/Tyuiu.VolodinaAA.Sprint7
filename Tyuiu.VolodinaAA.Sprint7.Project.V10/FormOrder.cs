@@ -22,7 +22,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         void comboBoxTowns_VAA_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedState = comboBoxTowns_VAA.SelectedItem.ToString();
-            MessageBox.Show(selectedState);
         }
         private void buttonNext_VAA_Click(object sender, EventArgs e)
         {
@@ -51,7 +50,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                 }
                 FormMain formMain = new FormMain();
                 formMain.Show();
-                this.Hide();
+                Close();
+                FormMain fm = new FormMain();
+                fm.Show();
 
             }
 

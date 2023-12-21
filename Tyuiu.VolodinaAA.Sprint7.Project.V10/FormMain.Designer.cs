@@ -30,7 +30,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.buttonBuy_VAA = new System.Windows.Forms.Button();
             this.panelRight_VAA = new System.Windows.Forms.Panel();
             this.buttonAuthorise_VAA = new System.Windows.Forms.Button();
@@ -38,15 +37,15 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonInstruction_VAA = new System.Windows.Forms.Button();
             this.buttonInformation_VAA = new System.Windows.Forms.Button();
             this.toolTipHelper_VAA = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBoxMnogoThings_VAA = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBantik_VAA = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAngels_VAA = new System.Windows.Forms.PictureBox();
+            this.pictureBoxToys_VAA = new System.Windows.Forms.PictureBox();
             this.panelTop_VAA = new System.Windows.Forms.Panel();
             this.labelTop_VAA = new System.Windows.Forms.Label();
+            this.buttonNextPicture_VAA = new System.Windows.Forms.Button();
+            this.buttonPreviousPicture_VAA = new System.Windows.Forms.Button();
+            this.labelCapture_VAA = new System.Windows.Forms.Label();
+            this.labelPrice_VAA = new System.Windows.Forms.Label();
             this.panelRight_VAA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMnogoThings_VAA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBantik_VAA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAngels_VAA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToys_VAA)).BeginInit();
             this.panelTop_VAA.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,35 +134,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.toolTipHelper_VAA.IsBalloon = true;
             this.toolTipHelper_VAA.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // pictureBoxMnogoThings_VAA
+            // pictureBoxToys_VAA
             // 
-            this.pictureBoxMnogoThings_VAA.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMnogoThings_VAA.Image")));
-            this.pictureBoxMnogoThings_VAA.Location = new System.Drawing.Point(27, 161);
-            this.pictureBoxMnogoThings_VAA.Name = "pictureBoxMnogoThings_VAA";
-            this.pictureBoxMnogoThings_VAA.Size = new System.Drawing.Size(274, 354);
-            this.pictureBoxMnogoThings_VAA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMnogoThings_VAA.TabIndex = 2;
-            this.pictureBoxMnogoThings_VAA.TabStop = false;
-            // 
-            // pictureBoxBantik_VAA
-            // 
-            this.pictureBoxBantik_VAA.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBantik_VAA.Image")));
-            this.pictureBoxBantik_VAA.Location = new System.Drawing.Point(320, 161);
-            this.pictureBoxBantik_VAA.Name = "pictureBoxBantik_VAA";
-            this.pictureBoxBantik_VAA.Size = new System.Drawing.Size(284, 354);
-            this.pictureBoxBantik_VAA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBantik_VAA.TabIndex = 3;
-            this.pictureBoxBantik_VAA.TabStop = false;
-            // 
-            // pictureBoxAngels_VAA
-            // 
-            this.pictureBoxAngels_VAA.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAngels_VAA.Image")));
-            this.pictureBoxAngels_VAA.Location = new System.Drawing.Point(621, 161);
-            this.pictureBoxAngels_VAA.Name = "pictureBoxAngels_VAA";
-            this.pictureBoxAngels_VAA.Size = new System.Drawing.Size(284, 352);
-            this.pictureBoxAngels_VAA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAngels_VAA.TabIndex = 4;
-            this.pictureBoxAngels_VAA.TabStop = false;
+            this.pictureBoxToys_VAA.Location = new System.Drawing.Point(322, 174);
+            this.pictureBoxToys_VAA.Name = "pictureBoxToys_VAA";
+            this.pictureBoxToys_VAA.Size = new System.Drawing.Size(284, 354);
+            this.pictureBoxToys_VAA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxToys_VAA.TabIndex = 3;
+            this.pictureBoxToys_VAA.TabStop = false;
             // 
             // panelTop_VAA
             // 
@@ -172,7 +150,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelTop_VAA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_VAA.Location = new System.Drawing.Point(0, 0);
             this.panelTop_VAA.Name = "panelTop_VAA";
-            this.panelTop_VAA.Size = new System.Drawing.Size(933, 135);
+            this.panelTop_VAA.Size = new System.Drawing.Size(933, 113);
             this.panelTop_VAA.TabIndex = 5;
             // 
             // labelTop_VAA
@@ -187,26 +165,65 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelTop_VAA.Text = "Новый 2024 год уже на носу! Поэтому встречайте \r\nнашу новую коллекцию ёлочных игр" +
     "ушек hand-made \r\nпроизводства";
             // 
+            // buttonNextPicture_VAA
+            // 
+            this.buttonNextPicture_VAA.Location = new System.Drawing.Point(628, 293);
+            this.buttonNextPicture_VAA.Name = "buttonNextPicture_VAA";
+            this.buttonNextPicture_VAA.Size = new System.Drawing.Size(81, 71);
+            this.buttonNextPicture_VAA.TabIndex = 6;
+            this.buttonNextPicture_VAA.Text = "-->";
+            this.buttonNextPicture_VAA.UseVisualStyleBackColor = true;
+            this.buttonNextPicture_VAA.Click += new System.EventHandler(this.buttonNextPicture_VAA_Click);
+            // 
+            // buttonPreviousPicture_VAA
+            // 
+            this.buttonPreviousPicture_VAA.Location = new System.Drawing.Point(219, 293);
+            this.buttonPreviousPicture_VAA.Name = "buttonPreviousPicture_VAA";
+            this.buttonPreviousPicture_VAA.Size = new System.Drawing.Size(81, 71);
+            this.buttonPreviousPicture_VAA.TabIndex = 6;
+            this.buttonPreviousPicture_VAA.Text = "<--";
+            this.buttonPreviousPicture_VAA.UseVisualStyleBackColor = true;
+            this.buttonPreviousPicture_VAA.Click += new System.EventHandler(this.buttonPreviousPicture_VAA_Click);
+            // 
+            // labelCapture_VAA
+            // 
+            this.labelCapture_VAA.AutoSize = true;
+            this.labelCapture_VAA.Location = new System.Drawing.Point(667, 174);
+            this.labelCapture_VAA.Name = "labelCapture_VAA";
+            this.labelCapture_VAA.Size = new System.Drawing.Size(74, 17);
+            this.labelCapture_VAA.TabIndex = 7;
+            this.labelCapture_VAA.Text = "Описание";
+            // 
+            // labelPrice_VAA
+            // 
+            this.labelPrice_VAA.AutoSize = true;
+            this.labelPrice_VAA.Location = new System.Drawing.Point(51, 174);
+            this.labelPrice_VAA.Name = "labelPrice_VAA";
+            this.labelPrice_VAA.Size = new System.Drawing.Size(43, 17);
+            this.labelPrice_VAA.TabIndex = 8;
+            this.labelPrice_VAA.Text = "Цена";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 549);
+            this.Controls.Add(this.labelPrice_VAA);
+            this.Controls.Add(this.labelCapture_VAA);
+            this.Controls.Add(this.buttonPreviousPicture_VAA);
+            this.Controls.Add(this.buttonNextPicture_VAA);
             this.Controls.Add(this.panelTop_VAA);
-            this.Controls.Add(this.pictureBoxAngels_VAA);
-            this.Controls.Add(this.pictureBoxBantik_VAA);
-            this.Controls.Add(this.pictureBoxMnogoThings_VAA);
+            this.Controls.Add(this.pictureBoxToys_VAA);
             this.Controls.Add(this.panelRight_VAA);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ЗАКАЗ НОВОГОДНИХ ИГРУШЕК";
             this.panelRight_VAA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMnogoThings_VAA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBantik_VAA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAngels_VAA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToys_VAA)).EndInit();
             this.panelTop_VAA.ResumeLayout(false);
             this.panelTop_VAA.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -219,11 +236,13 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.Button buttonStatistic_VAA;
         private System.Windows.Forms.Button buttonAuthorise_VAA;
         private System.Windows.Forms.ToolTip toolTipHelper_VAA;
-        private System.Windows.Forms.PictureBox pictureBoxMnogoThings_VAA;
-        private System.Windows.Forms.PictureBox pictureBoxBantik_VAA;
-        private System.Windows.Forms.PictureBox pictureBoxAngels_VAA;
+        private System.Windows.Forms.PictureBox pictureBoxToys_VAA;
         private System.Windows.Forms.Panel panelTop_VAA;
         private System.Windows.Forms.Label labelTop_VAA;
+        private System.Windows.Forms.Button buttonNextPicture_VAA;
+        private System.Windows.Forms.Button buttonPreviousPicture_VAA;
+        private System.Windows.Forms.Label labelCapture_VAA;
+        private System.Windows.Forms.Label labelPrice_VAA;
     }
 }
 
