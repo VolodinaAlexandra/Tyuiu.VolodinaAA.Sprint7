@@ -30,8 +30,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             if (dialogResult == DialogResult.OK)
             {
                 
-                FormAuthorise formOrderInfo = new FormAuthorise();
-                formOrderInfo.ShowDialog();
 
                 string path = $@"{Directory.GetCurrentDirectory()}\Данные Пользователей.csv";
                 
@@ -48,11 +46,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                     streamWriter.WriteLine(data);
                     streamWriter.Close();
                 }
-                FormMain formMain = new FormMain();
-                formMain.Show();
-                Close();
-                FormMain fm = new FormMain();
-                fm.Show();
+                FormPersonalCabinet pc = new FormPersonalCabinet();
+                pc.ShowDialog();
+                
 
             }
 

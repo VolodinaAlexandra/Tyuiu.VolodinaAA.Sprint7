@@ -89,7 +89,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonEnd_VAA.Name = "buttonEnd_VAA";
             this.buttonEnd_VAA.Size = new System.Drawing.Size(171, 53);
             this.buttonEnd_VAA.TabIndex = 0;
-            this.buttonEnd_VAA.Text = "Завершить регистрацию";
+            this.buttonEnd_VAA.Text = "Сохранить данные";
             this.buttonEnd_VAA.UseVisualStyleBackColor = true;
             this.buttonEnd_VAA.Click += new System.EventHandler(this.buttonNext_VAA_Click);
             // 

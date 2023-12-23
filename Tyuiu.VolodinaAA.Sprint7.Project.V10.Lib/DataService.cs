@@ -12,6 +12,11 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10.Lib
         public string Month { get; set; }
         public int Sales { get; set; }
     }
+    public class ThingsData
+    {
+        public string Thing { get; set; }
+        public int Sales { get; set; }
+    }
     public class SalesDataCollection : List<SalesData>
     {
         public SalesDataCollection()
@@ -31,4 +36,34 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10.Lib
         }
 
     }
+    public class ThingsDataCollection: List<ThingsData>
+    {
+        public ThingsDataCollection()
+        {
+            Add(new ThingsData { Thing = "Ёлочная игрушка Ангелочки", Sales = 3500 });
+            Add(new ThingsData { Thing = "Набор ёлочных игрушек", Sales = 1645 });
+            Add(new ThingsData { Thing = "Ёлочная игрушка Луна", Sales =  485});
+            Add(new ThingsData { Thing = "Ёлочная игрушка Бантик", Sales = 1204 });
+        }
+    }
+    public class SummItem
+    {
+        public int GetPriceForItem(string item)
+        {
+            switch (item)
+            {
+                case "Ёлочная игрушка Ангелочки":
+                    return 450;
+                case "Набор ёлочных игрушек":
+                    return 650;
+                case "Ёлочная игрушка Луна":
+                    return 150;
+                case "Ёлочная игрушка Бантик":
+                    return 250;
+                default:
+                    return 0;
+            }
+        }
+    }
+    
 }

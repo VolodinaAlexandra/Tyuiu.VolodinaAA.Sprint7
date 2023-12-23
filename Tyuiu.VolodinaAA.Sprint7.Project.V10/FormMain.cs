@@ -24,10 +24,10 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\moon.jpg"));
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\bantik.jpg"));
 
-            captions.Add("Ёлочная игрушка Ангелочки");
-            captions.Add("Набор ёлочных игрушек");
-            captions.Add("Ёлочная игрушка Луна");
-            captions.Add("Ёлочная игрушка Бантик");
+            captions.Add("Ёлочная игрушка \nАнгелочки");
+            captions.Add("Набор ёлочных \nигрушек");
+            captions.Add("Ёлочная игрушка \nЛуна");
+            captions.Add("Ёлочная игрушка \nБантик");
 
             price.Add("450 руб.");
             price.Add("650 руб.");
@@ -40,15 +40,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         }
 
 
-        private void buttonGoToOrder_VAA_MouseEnter(object sender, EventArgs e)
-        {
-            buttonBuy_VAA.BackColor = Color.AliceBlue;
-        }
-
-        private void buttonGoToOrder_VAA_MouseLeave(object sender, EventArgs e)
-        {
-            buttonBuy_VAA.BackColor = Color.White;
-        }
 
         private void buttonInformation_VAA_Click(object sender, EventArgs e)
         {
@@ -76,8 +67,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
 
         private void buttonBuy_VAA_Click(object sender, EventArgs e)
         {
-            FormPersonalCabinet personalCabinet = new FormPersonalCabinet();
-            personalCabinet.ShowDialog();
+            FormOrder formOrder = new FormOrder();
+            formOrder.ShowDialog();
         }
 
         private void buttonNextPicture_VAA_Click(object sender, EventArgs e)
@@ -102,6 +93,17 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             pictureBoxToys_VAA.Image = images[currentIndex];
             labelCapture_VAA.Text = captions[currentIndex];
             labelPrice_VAA.Text = price[currentIndex];
+        }
+
+        private void buttonOrder_VAA_Click(object sender, EventArgs e)
+        {
+            FormPersonalCabinet pc = new FormPersonalCabinet();
+            pc.ShowDialog();
+        }
+
+        private void pictureBoxToys_VAA_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

@@ -21,10 +21,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         SalesData sd = new SalesData();
         private SalesDataCollection salesDataCollection;
 
+        ThingsData td = new ThingsData();
+        private ThingsDataCollection thingsDataCollection;
+
         public FormStatistic()
         {
             InitializeComponent();
             salesDataCollection = new SalesDataCollection();
+            thingsDataCollection = new ThingsDataCollection();
         }
 
         private void buttonSales_VAA_Click(object sender, EventArgs e)
@@ -41,6 +45,19 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                 salesSeries.Points.AddXY(salesData.Month, salesData.Sales);
             }
 
+            chartStatistic_VAA.Series.Add(salesSeries);
+        }
+        
+        private void buttonPopularThings_VAA_Click(object sender, EventArgs e)
+        {
+            ThingsDataCollection td = new ThingsDataCollection();
+            chartStatistic_VAA.Series.Clear();
+            Series salesSeries = new Series("Продажи");
+            salesSeries.ChartType = SeriesChartType.Bar;
+            foreach (ThingsData thingsData in td)
+            {
+                salesSeries.Points.AddXY(thingsData.Thing, thingsData.Sales);
+            }
             chartStatistic_VAA.Series.Add(salesSeries);
         }
     }

@@ -35,8 +35,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                     streamWriter.Close();
                 }
                 
-                FormOrder formOrder = new FormOrder();
-                formOrder.ShowDialog();
                 this.Close();
             }
 

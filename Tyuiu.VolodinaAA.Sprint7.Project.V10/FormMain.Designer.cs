@@ -32,6 +32,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.components = new System.ComponentModel.Container();
             this.buttonBuy_VAA = new System.Windows.Forms.Button();
             this.panelRight_VAA = new System.Windows.Forms.Panel();
+            this.buttonOrder_VAA = new System.Windows.Forms.Button();
             this.buttonAuthorise_VAA = new System.Windows.Forms.Button();
             this.buttonStatistic_VAA = new System.Windows.Forms.Button();
             this.buttonInstruction_VAA = new System.Windows.Forms.Button();
@@ -60,16 +61,15 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonBuy_VAA.Name = "buttonBuy_VAA";
             this.buttonBuy_VAA.Size = new System.Drawing.Size(171, 91);
             this.buttonBuy_VAA.TabIndex = 0;
-            this.buttonBuy_VAA.Text = "Купить ёлочную игрушку";
+            this.buttonBuy_VAA.Text = "Сделать заказ";
             this.toolTipHelper_VAA.SetToolTip(this.buttonBuy_VAA, "Для перехода к личный кабинет необходимо авторизироваться!");
             this.buttonBuy_VAA.UseVisualStyleBackColor = false;
             this.buttonBuy_VAA.Click += new System.EventHandler(this.buttonBuy_VAA_Click);
-            this.buttonBuy_VAA.MouseEnter += new System.EventHandler(this.buttonGoToOrder_VAA_MouseEnter);
-            this.buttonBuy_VAA.MouseLeave += new System.EventHandler(this.buttonGoToOrder_VAA_MouseLeave);
             // 
             // panelRight_VAA
             // 
             this.panelRight_VAA.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelRight_VAA.Controls.Add(this.buttonOrder_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonAuthorise_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonStatistic_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonInstruction_VAA);
@@ -80,6 +80,17 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelRight_VAA.Name = "panelRight_VAA";
             this.panelRight_VAA.Size = new System.Drawing.Size(200, 549);
             this.panelRight_VAA.TabIndex = 1;
+            // 
+            // buttonOrder_VAA
+            // 
+            this.buttonOrder_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOrder_VAA.Location = new System.Drawing.Point(17, 340);
+            this.buttonOrder_VAA.Name = "buttonOrder_VAA";
+            this.buttonOrder_VAA.Size = new System.Drawing.Size(171, 39);
+            this.buttonOrder_VAA.TabIndex = 4;
+            this.buttonOrder_VAA.Text = "Мой заказ";
+            this.buttonOrder_VAA.UseVisualStyleBackColor = true;
+            this.buttonOrder_VAA.Click += new System.EventHandler(this.buttonOrder_VAA_Click);
             // 
             // buttonAuthorise_VAA
             // 
@@ -136,12 +147,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // pictureBoxToys_VAA
             // 
+            this.pictureBoxToys_VAA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxToys_VAA.Location = new System.Drawing.Point(322, 174);
             this.pictureBoxToys_VAA.Name = "pictureBoxToys_VAA";
             this.pictureBoxToys_VAA.Size = new System.Drawing.Size(284, 354);
             this.pictureBoxToys_VAA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxToys_VAA.TabIndex = 3;
             this.pictureBoxToys_VAA.TabStop = false;
+            this.pictureBoxToys_VAA.Click += new System.EventHandler(this.pictureBoxToys_VAA_Click);
             // 
             // panelTop_VAA
             // 
@@ -157,16 +170,19 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.labelTop_VAA.AutoSize = true;
             this.labelTop_VAA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelTop_VAA.Font = new System.Drawing.Font("TT Travels ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTop_VAA.Font = new System.Drawing.Font("TT Travels Bold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelTop_VAA.Location = new System.Drawing.Point(0, 0);
             this.labelTop_VAA.Name = "labelTop_VAA";
-            this.labelTop_VAA.Size = new System.Drawing.Size(893, 108);
+            this.labelTop_VAA.Size = new System.Drawing.Size(832, 87);
             this.labelTop_VAA.TabIndex = 0;
-            this.labelTop_VAA.Text = "Новый 2024 год уже на носу! Поэтому встречайте \r\nнашу новую коллекцию ёлочных игр" +
-    "ушек hand-made \r\nпроизводства";
+            this.labelTop_VAA.Text = "Новый 2024 год уже на носу! Поэтому встречайте нашу новую \r\nколлекцию ёлочных игр" +
+    "ушек hand-made производства, заказ \r\nкоторых вы можете оформить в этом приложени" +
+    "и";
             // 
             // buttonNextPicture_VAA
             // 
+            this.buttonNextPicture_VAA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNextPicture_VAA.Font = new System.Drawing.Font("TT Travels Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNextPicture_VAA.Location = new System.Drawing.Point(628, 293);
             this.buttonNextPicture_VAA.Name = "buttonNextPicture_VAA";
             this.buttonNextPicture_VAA.Size = new System.Drawing.Size(81, 71);
@@ -177,6 +193,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonPreviousPicture_VAA
             // 
+            this.buttonPreviousPicture_VAA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPreviousPicture_VAA.Font = new System.Drawing.Font("TT Travels Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPreviousPicture_VAA.Location = new System.Drawing.Point(219, 293);
             this.buttonPreviousPicture_VAA.Name = "buttonPreviousPicture_VAA";
             this.buttonPreviousPicture_VAA.Size = new System.Drawing.Size(81, 71);
@@ -187,19 +205,22 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // labelCapture_VAA
             // 
+            this.labelCapture_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCapture_VAA.AutoSize = true;
+            this.labelCapture_VAA.Font = new System.Drawing.Font("TT Travels Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCapture_VAA.Location = new System.Drawing.Point(667, 174);
             this.labelCapture_VAA.Name = "labelCapture_VAA";
-            this.labelCapture_VAA.Size = new System.Drawing.Size(74, 17);
+            this.labelCapture_VAA.Size = new System.Drawing.Size(110, 23);
             this.labelCapture_VAA.TabIndex = 7;
             this.labelCapture_VAA.Text = "Описание";
             // 
             // labelPrice_VAA
             // 
             this.labelPrice_VAA.AutoSize = true;
+            this.labelPrice_VAA.Font = new System.Drawing.Font("TT Travels DemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPrice_VAA.Location = new System.Drawing.Point(51, 174);
             this.labelPrice_VAA.Name = "labelPrice_VAA";
-            this.labelPrice_VAA.Size = new System.Drawing.Size(43, 17);
+            this.labelPrice_VAA.Size = new System.Drawing.Size(62, 23);
             this.labelPrice_VAA.TabIndex = 8;
             this.labelPrice_VAA.Text = "Цена";
             // 
@@ -243,6 +264,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.Button buttonPreviousPicture_VAA;
         private System.Windows.Forms.Label labelCapture_VAA;
         private System.Windows.Forms.Label labelPrice_VAA;
+        private System.Windows.Forms.Button buttonOrder_VAA;
     }
 }
 
