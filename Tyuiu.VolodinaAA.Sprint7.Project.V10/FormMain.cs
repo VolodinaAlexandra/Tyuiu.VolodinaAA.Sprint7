@@ -23,14 +23,24 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\things.jpg"));
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\moon.jpg"));
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\bantik.jpg"));
+            images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\shelkunchiki.jpg"));
+            images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\house.jpg"));
+            images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\matreshka.jpg"));
+
 
             captions.Add("Ёлочная игрушка \nАнгелочки");
             captions.Add("Набор ёлочных \nигрушек");
-            captions.Add("Ёлочная игрушка \nЛуна");
+            captions.Add("Ёлочная игрушка \nПолумесяц");
             captions.Add("Ёлочная игрушка \nБантик");
+            captions.Add("Ёлочная игрушка \nЩелкунчик");
+            captions.Add("Ёлочная игрушка \nИзбушка");
+            captions.Add("Ёлочная игрушка \nМатрёшка");
 
             price.Add("450 руб.");
             price.Add("650 руб.");
+            price.Add("150 руб.");
+            price.Add("250 руб.");
+            price.Add("350 руб.");
             price.Add("150 руб.");
             price.Add("250 руб.");
 
@@ -63,6 +73,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         {
             FormAuthorise formAuthorise = new FormAuthorise();
             formAuthorise.ShowDialog();
+            buttonBuy_VAA.Enabled = true; 
         }
 
         private void buttonBuy_VAA_Click(object sender, EventArgs e)
@@ -101,9 +112,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             pc.ShowDialog();
         }
 
-        private void pictureBoxToys_VAA_Click(object sender, EventArgs e)
-        {
-            //
-        }
+        
     }
 }

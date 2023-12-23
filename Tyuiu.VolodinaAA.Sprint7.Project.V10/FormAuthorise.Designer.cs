@@ -29,12 +29,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxLogin_VAA = new System.Windows.Forms.TextBox();
             this.textBoxPassword_VAA = new System.Windows.Forms.TextBox();
             this.labelLogin_VAA = new System.Windows.Forms.Label();
             this.labelPassword_VAA = new System.Windows.Forms.Label();
             this.labelInfo_VAA = new System.Windows.Forms.Label();
             this.buttonContinue_VAA = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBoxLogin_VAA
@@ -43,7 +45,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.textBoxLogin_VAA.Name = "textBoxLogin_VAA";
             this.textBoxLogin_VAA.Size = new System.Drawing.Size(199, 23);
             this.textBoxLogin_VAA.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.textBoxLogin_VAA, "Введите логин не длиннее 16 символов,можно использовать буквы и цифры");
             this.textBoxLogin_VAA.TextChanged += new System.EventHandler(this.textBoxLogin_VAA_TextChanged);
+            this.textBoxLogin_VAA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLogin_VAA_KeyPress);
             // 
             // textBoxPassword_VAA
             // 
@@ -52,6 +56,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.textBoxPassword_VAA.Size = new System.Drawing.Size(196, 23);
             this.textBoxPassword_VAA.TabIndex = 1;
             this.textBoxPassword_VAA.TextChanged += new System.EventHandler(this.textBoxPassword_VAA_TextChanged);
+            this.textBoxPassword_VAA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_VAA_KeyPress);
             // 
             // labelLogin_VAA
             // 
@@ -62,6 +67,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelLogin_VAA.Size = new System.Drawing.Size(54, 17);
             this.labelLogin_VAA.TabIndex = 2;
             this.labelLogin_VAA.Text = "Логин";
+            this.toolTip1.SetToolTip(this.labelLogin_VAA, "Введите логин не длиннее 16 символов,можно использовать буквы и цифры");
             // 
             // labelPassword_VAA
             // 
@@ -72,6 +78,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelPassword_VAA.Size = new System.Drawing.Size(65, 17);
             this.labelPassword_VAA.TabIndex = 3;
             this.labelPassword_VAA.Text = "Пароль";
+            this.toolTip1.SetToolTip(this.labelPassword_VAA, "Введите пароль,длина которого должна быть равна 8\r\nМожно использовать буквы и циф" +
+        "ры");
             // 
             // labelInfo_VAA
             // 
@@ -94,6 +102,12 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonContinue_VAA.UseVisualStyleBackColor = true;
             this.buttonContinue_VAA.Click += new System.EventHandler(this.buttonContinue_VAA_Click);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Подсказка";
+            // 
             // FormAuthorise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -106,6 +120,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.Controls.Add(this.textBoxPassword_VAA);
             this.Controls.Add(this.textBoxLogin_VAA);
             this.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormAuthorise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АВТОРИЗАЦИЯ ПОЛЬЗОВАТЕЛЯ";
@@ -122,5 +139,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.Label labelPassword_VAA;
         private System.Windows.Forms.Label labelInfo_VAA;
         private System.Windows.Forms.Button buttonContinue_VAA;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

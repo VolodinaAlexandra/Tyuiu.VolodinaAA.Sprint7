@@ -40,10 +40,13 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10.Lib
     {
         public ThingsDataCollection()
         {
-            Add(new ThingsData { Thing = "Ёлочная игрушка Ангелочки", Sales = 3500 });
+            Add(new ThingsData { Thing = "Ёлочная игрушка Ангелочки", Sales = 350 });
             Add(new ThingsData { Thing = "Набор ёлочных игрушек", Sales = 1645 });
             Add(new ThingsData { Thing = "Ёлочная игрушка Луна", Sales =  485});
             Add(new ThingsData { Thing = "Ёлочная игрушка Бантик", Sales = 1204 });
+            Add(new ThingsData { Thing = "Ёлочная игрушка Щелкунчик", Sales = 918 });
+            Add(new ThingsData { Thing = "Ёлочная игрушка Избушка", Sales = 513 });
+            Add(new ThingsData { Thing = "Ёлочная игрушка Матрёшка", Sales = 1118 });
         }
     }
     public class SummItem
@@ -59,6 +62,12 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10.Lib
                 case "Ёлочная игрушка Луна":
                     return 150;
                 case "Ёлочная игрушка Бантик":
+                    return 250;
+                case "Ёлочная игрушка Щелкунчик":
+                    return 350;
+                case "Ёлочная игрушка Избушка":
+                    return 150;
+                case "Ёлочная игрушка Матрёшка":
                     return 250;
                 default:
                     return 0;

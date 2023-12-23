@@ -38,10 +38,10 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonInstruction_VAA = new System.Windows.Forms.Button();
             this.buttonInformation_VAA = new System.Windows.Forms.Button();
             this.toolTipHelper_VAA = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonNextPicture_VAA = new System.Windows.Forms.Button();
             this.pictureBoxToys_VAA = new System.Windows.Forms.PictureBox();
             this.panelTop_VAA = new System.Windows.Forms.Panel();
             this.labelTop_VAA = new System.Windows.Forms.Label();
-            this.buttonNextPicture_VAA = new System.Windows.Forms.Button();
             this.buttonPreviousPicture_VAA = new System.Windows.Forms.Button();
             this.labelCapture_VAA = new System.Windows.Forms.Label();
             this.labelPrice_VAA = new System.Windows.Forms.Label();
@@ -54,7 +54,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.buttonBuy_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuy_VAA.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonBuy_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBuy_VAA.Enabled = false;
+            this.buttonBuy_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuy_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBuy_VAA.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonBuy_VAA.Location = new System.Drawing.Point(17, 437);
@@ -62,7 +63,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonBuy_VAA.Size = new System.Drawing.Size(171, 91);
             this.buttonBuy_VAA.TabIndex = 0;
             this.buttonBuy_VAA.Text = "Сделать заказ";
-            this.toolTipHelper_VAA.SetToolTip(this.buttonBuy_VAA, "Для перехода к личный кабинет необходимо авторизироваться!");
             this.buttonBuy_VAA.UseVisualStyleBackColor = false;
             this.buttonBuy_VAA.Click += new System.EventHandler(this.buttonBuy_VAA_Click);
             // 
@@ -83,6 +83,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonOrder_VAA
             // 
+            this.buttonOrder_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOrder_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOrder_VAA.Location = new System.Drawing.Point(17, 340);
             this.buttonOrder_VAA.Name = "buttonOrder_VAA";
@@ -95,12 +96,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // buttonAuthorise_VAA
             // 
             this.buttonAuthorise_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAuthorise_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAuthorise_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAuthorise_VAA.Location = new System.Drawing.Point(17, 385);
             this.buttonAuthorise_VAA.Name = "buttonAuthorise_VAA";
             this.buttonAuthorise_VAA.Size = new System.Drawing.Size(171, 46);
             this.buttonAuthorise_VAA.TabIndex = 3;
             this.buttonAuthorise_VAA.Text = "Авторизироваться";
+            this.toolTipHelper_VAA.SetToolTip(this.buttonAuthorise_VAA, "Авторизируйтесь, чтобы стала доступна кнопка сделать заказ");
             this.buttonAuthorise_VAA.UseVisualStyleBackColor = true;
             this.buttonAuthorise_VAA.Click += new System.EventHandler(this.buttonAuthorise_VAA_Click);
             // 
@@ -112,7 +115,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonStatistic_VAA.Name = "buttonStatistic_VAA";
             this.buttonStatistic_VAA.Size = new System.Drawing.Size(171, 60);
             this.buttonStatistic_VAA.TabIndex = 2;
-            this.buttonStatistic_VAA.Text = "Просмотреть статистику приложения";
+            this.buttonStatistic_VAA.Text = "Данные о продажах";
             this.buttonStatistic_VAA.UseVisualStyleBackColor = true;
             this.buttonStatistic_VAA.Click += new System.EventHandler(this.buttonStatistic_VAA_Click);
             // 
@@ -144,17 +147,31 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.toolTipHelper_VAA.IsBalloon = true;
             this.toolTipHelper_VAA.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipHelper_VAA.ToolTipTitle = "Подсказка";
+            // 
+            // buttonNextPicture_VAA
+            // 
+            this.buttonNextPicture_VAA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNextPicture_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNextPicture_VAA.Font = new System.Drawing.Font("TT Travels Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonNextPicture_VAA.Location = new System.Drawing.Point(576, 293);
+            this.buttonNextPicture_VAA.Name = "buttonNextPicture_VAA";
+            this.buttonNextPicture_VAA.Size = new System.Drawing.Size(81, 71);
+            this.buttonNextPicture_VAA.TabIndex = 6;
+            this.buttonNextPicture_VAA.Text = "-->";
+            this.toolTipHelper_VAA.SetToolTip(this.buttonNextPicture_VAA, "Нажмите,чтобы просмотреть другие товары");
+            this.buttonNextPicture_VAA.UseVisualStyleBackColor = true;
+            this.buttonNextPicture_VAA.Click += new System.EventHandler(this.buttonNextPicture_VAA_Click);
             // 
             // pictureBoxToys_VAA
             // 
             this.pictureBoxToys_VAA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxToys_VAA.Location = new System.Drawing.Point(322, 174);
+            this.pictureBoxToys_VAA.Location = new System.Drawing.Point(271, 174);
             this.pictureBoxToys_VAA.Name = "pictureBoxToys_VAA";
             this.pictureBoxToys_VAA.Size = new System.Drawing.Size(284, 354);
             this.pictureBoxToys_VAA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxToys_VAA.TabIndex = 3;
             this.pictureBoxToys_VAA.TabStop = false;
-            this.pictureBoxToys_VAA.Click += new System.EventHandler(this.pictureBoxToys_VAA_Click);
             // 
             // panelTop_VAA
             // 
@@ -179,23 +196,12 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
     "ушек hand-made производства, заказ \r\nкоторых вы можете оформить в этом приложени" +
     "и";
             // 
-            // buttonNextPicture_VAA
-            // 
-            this.buttonNextPicture_VAA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonNextPicture_VAA.Font = new System.Drawing.Font("TT Travels Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNextPicture_VAA.Location = new System.Drawing.Point(628, 293);
-            this.buttonNextPicture_VAA.Name = "buttonNextPicture_VAA";
-            this.buttonNextPicture_VAA.Size = new System.Drawing.Size(81, 71);
-            this.buttonNextPicture_VAA.TabIndex = 6;
-            this.buttonNextPicture_VAA.Text = "-->";
-            this.buttonNextPicture_VAA.UseVisualStyleBackColor = true;
-            this.buttonNextPicture_VAA.Click += new System.EventHandler(this.buttonNextPicture_VAA_Click);
-            // 
             // buttonPreviousPicture_VAA
             // 
             this.buttonPreviousPicture_VAA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPreviousPicture_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPreviousPicture_VAA.Font = new System.Drawing.Font("TT Travels Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPreviousPicture_VAA.Location = new System.Drawing.Point(219, 293);
+            this.buttonPreviousPicture_VAA.Location = new System.Drawing.Point(168, 293);
             this.buttonPreviousPicture_VAA.Name = "buttonPreviousPicture_VAA";
             this.buttonPreviousPicture_VAA.Size = new System.Drawing.Size(81, 71);
             this.buttonPreviousPicture_VAA.TabIndex = 6;

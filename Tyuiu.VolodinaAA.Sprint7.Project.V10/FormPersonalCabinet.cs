@@ -17,6 +17,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private List<Image> images = new List<Image>();
         private List<string> captions = new List<string>();
         private List<string> price = new List<string>();
+        private List<string> selectedItems = new List<string>();
         public FormPersonalCabinet()
         {
             InitializeComponent();
@@ -24,14 +25,24 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\things.jpg"));
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\moon.jpg"));
             images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\bantik.jpg"));
+            images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\shelkunchiki.jpg"));
+            images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\house.jpg"));
+            images.Add(Image.FromFile(@"C:\Users\Александра\Pictures\matreshka.jpg"));
 
             captions.Add("Ёлочная игрушка \nАнгелочки");
             captions.Add("Набор ёлочных \nигрушек");
             captions.Add("Ёлочная игрушка \nЛуна");
             captions.Add("Ёлочная игрушка \nБантик");
+            captions.Add("Ёлочная игрушка \nЩелкунчик");
+            captions.Add("Ёлочная игрушка \nИзбушка");
+            captions.Add("Ёлочная игрушка \nМатрёшка");
+
 
             price.Add("450 руб.");
             price.Add("650 руб.");
+            price.Add("150 руб.");
+            price.Add("250 руб.");
+            price.Add("350 руб.");
             price.Add("150 руб.");
             price.Add("250 руб.");
 
@@ -70,7 +81,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
 
             double totalSum = 0;
 
-            // Проходим по всем выбранным элементам CheckedListBox
             for (int i = 0; i < checkedListBoxItems_VAA.CheckedItems.Count; i++)
             {
                 string item = checkedListBoxItems_VAA.CheckedItems[i].ToString();
@@ -79,8 +89,19 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                 totalSum += price;
             }
 
-            // Выводим общую сумму в TextBox
             textBoxItogo_VAA.Text = totalSum.ToString();
+        }
+
+        private void buttonEndofOrder_VAA_Click(object sender, EventArgs e)
+        {
+            foreach (string item in checkedListBoxItems_VAA.CheckedItems)
+            {
+                selectedItems.Add(item);
+            }
+
+            FormMyOrders mo = new FormMyOrders(selectedItems);
+            mo.Show();
+            
         }
     }
 }

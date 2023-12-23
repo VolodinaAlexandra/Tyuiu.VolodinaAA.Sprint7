@@ -152,6 +152,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.textBoxPostIndex_VAA.Name = "textBoxPostIndex_VAA";
             this.textBoxPostIndex_VAA.Size = new System.Drawing.Size(190, 22);
             this.textBoxPostIndex_VAA.TabIndex = 12;
+            this.textBoxPostIndex_VAA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPostIndex_VAA_KeyPress);
             // 
             // labelTowns_VAA
             // 

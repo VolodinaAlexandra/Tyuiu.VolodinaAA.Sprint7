@@ -76,6 +76,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.Controls.Add(this.labelInformation_VAA);
             this.Controls.Add(this.pictureBoxAvatarka_VAA);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ИНФОРМАЦИЯ О РАЗРАБОТЧИКЕ";

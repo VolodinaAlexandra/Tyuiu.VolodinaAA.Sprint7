@@ -16,6 +16,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         public FormAuthorise()
         {
             InitializeComponent();
+            textBoxLogin_VAA.KeyPress += new KeyPressEventHandler(textBoxLogin_VAA_KeyPress);
+            textBoxPassword_VAA.KeyPress += new KeyPressEventHandler(textBoxPassword_VAA_KeyPress);
         }
 
 
@@ -37,7 +39,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                 
                 this.Close();
             }
-
+            
         }
 
         private void textBoxLogin_VAA_TextChanged(object sender, EventArgs e)
@@ -55,6 +57,32 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             bool isPasswordEmpty = string.IsNullOrWhiteSpace(textBoxPassword_VAA.Text);
 
             buttonContinue_VAA.Enabled = !isLoginEmpty && !isPasswordEmpty;
+        }
+
+        private void textBoxLogin_VAA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (textBoxLogin_VAA.Text.Length >= 16 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPassword_VAA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (textBoxPassword_VAA.Text.Length == 8 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

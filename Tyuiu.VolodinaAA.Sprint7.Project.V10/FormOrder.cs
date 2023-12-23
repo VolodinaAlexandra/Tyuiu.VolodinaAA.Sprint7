@@ -18,6 +18,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             InitializeComponent();
 
             comboBoxTowns_VAA.SelectedIndexChanged += comboBoxTowns_VAA_SelectedIndexChanged;
+            textBoxPostIndex_VAA.KeyPress += new KeyPressEventHandler(textBoxPostIndex_VAA_KeyPress);
         }
         void comboBoxTowns_VAA_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -62,6 +63,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private void buttonGoBack_VAA_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxPostIndex_VAA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && textBoxPostIndex_VAA.Text.Length == 6 && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
