@@ -84,5 +84,15 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                 e.Handled = true;
             }
         }
+
+        private void buttonContinue_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonContinue_VAA.BackColor = Color.Coral;
+        }
+
+        private void buttonContinue_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonContinue_VAA.BackColor = Color.White;
+        }
     }
 }

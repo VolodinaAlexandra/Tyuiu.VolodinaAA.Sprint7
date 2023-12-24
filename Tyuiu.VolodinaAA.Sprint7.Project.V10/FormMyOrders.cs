@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
 {
@@ -20,15 +21,36 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             labelDateTimeValue_VAA.Text = DateTimeValue;
             foreach (string item in selectedItems)
             {
-                labelListOfOrders_VAA.Text += item + ",\n";
+                labelListOfOrders_VAA.Text += item + ",";
             }
         }
 
         private void buttonGoToMenu_VAA_Click(object sender, EventArgs e)
         {
-            FormMain fm = new FormMain();
-            fm.ShowDialog();
+            string path = $@"{Directory.GetCurrentDirectory()}\Заказы.csv";
+
+            using (StreamWriter streamWriter = new StreamWriter(path, true, Encoding.Default))
+            {
+                string order = labelListOfOrders_VAA.Text;
+                string price = labelTotalAmount_VAA.Text;
+                string date = labelDateTimeValue_VAA.Text;
+               ;
+                string data = $"{order};{price};{date}";
+                streamWriter.WriteLine(data);
+                streamWriter.Close();
+            }
+            
             this.Hide();
+        }
+
+        private void buttonGoToMenu_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonGoToMenu_VAA.BackColor = Color.Coral;
+        }
+
+        private void buttonGoToMenu_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonGoToMenu_VAA.BackColor = Color.White;
         }
     }
 }

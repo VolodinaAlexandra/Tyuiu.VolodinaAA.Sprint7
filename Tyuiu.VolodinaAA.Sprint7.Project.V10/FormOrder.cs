@@ -49,6 +49,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
                 }
                 FormPersonalCabinet pc = new FormPersonalCabinet();
                 pc.ShowDialog();
+                this.Hide();
                 
 
             }
@@ -71,6 +72,16 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             {
                 e.Handled = true;
             }
+        }
+
+        private void buttonEnd_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonEnd_VAA.BackColor = Color.Coral;
+        }
+
+        private void buttonEnd_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonEnd_VAA.BackColor = Color.White;
         }
     }
 }

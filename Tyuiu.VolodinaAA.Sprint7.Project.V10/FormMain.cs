@@ -80,7 +80,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         {
             FormOrder formOrder = new FormOrder();
             formOrder.ShowDialog();
-            buttonMyOrders_VAA.Enabled = true;
         }
 
         private void buttonNextPicture_VAA_Click(object sender, EventArgs e)
@@ -107,12 +106,74 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             labelPrice_VAA.Text = price[currentIndex];
         }
 
-        private void buttonOrder_VAA_Click(object sender, EventArgs e)
+        private void buttonBuy_VAA_MouseEnter(object sender, EventArgs e)
         {
-            //FormMyOrders mo = new FormMyOrders();
-            //mo.ShowDialog();
+            buttonBuy_VAA.BackColor = Color.Green;
         }
 
-        
+        private void buttonBuy_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonBuy_VAA.BackColor = Color.White;
+        }
+
+        private void buttonAuthorise_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonAuthorise_VAA.BackColor = Color.Red;
+        }
+
+        private void buttonAuthorise_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonAuthorise_VAA.BackColor = Color.White;
+        }
+
+        private void buttonStatistic_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonStatistic_VAA.BackColor = Color.Yellow;
+        }
+
+        private void buttonStatistic_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonStatistic_VAA.BackColor = Color.White;
+        }
+
+        private void buttonInformation_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonInformation_VAA.BackColor = Color.SkyBlue;
+        }
+
+        private void buttonInformation_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonInformation_VAA.BackColor = Color.White;
+        }
+
+        private void buttonInstruction_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonInstruction_VAA.BackColor = Color.Pink;
+        }
+
+        private void buttonInstruction_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonInstruction_VAA.BackColor = Color.White;
+        }
+
+        private void buttonNextPicture_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonNextPicture_VAA.BackColor = Color.LimeGreen;
+        }
+
+        private void buttonNextPicture_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonNextPicture_VAA.BackColor = Color.White;
+        }
+
+        private void buttonPreviousPicture_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonPreviousPicture_VAA.BackColor = Color.LimeGreen;
+        }
+
+        private void buttonPreviousPicture_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonPreviousPicture_VAA.BackColor = Color.White;
+        }
     }
 }

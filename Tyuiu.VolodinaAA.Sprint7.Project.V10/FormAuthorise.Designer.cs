@@ -93,14 +93,18 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonContinue_VAA
             // 
+            this.buttonContinue_VAA.BackColor = System.Drawing.Color.White;
             this.buttonContinue_VAA.Enabled = false;
+            this.buttonContinue_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonContinue_VAA.Location = new System.Drawing.Point(417, 166);
             this.buttonContinue_VAA.Name = "buttonContinue_VAA";
             this.buttonContinue_VAA.Size = new System.Drawing.Size(173, 38);
             this.buttonContinue_VAA.TabIndex = 6;
             this.buttonContinue_VAA.Text = "Сохранить данные";
-            this.buttonContinue_VAA.UseVisualStyleBackColor = true;
+            this.buttonContinue_VAA.UseVisualStyleBackColor = false;
             this.buttonContinue_VAA.Click += new System.EventHandler(this.buttonContinue_VAA_Click);
+            this.buttonContinue_VAA.MouseEnter += new System.EventHandler(this.buttonContinue_VAA_MouseEnter);
+            this.buttonContinue_VAA.MouseLeave += new System.EventHandler(this.buttonContinue_VAA_MouseLeave);
             // 
             // toolTip1
             // 

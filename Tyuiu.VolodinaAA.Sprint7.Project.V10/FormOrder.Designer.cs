@@ -30,8 +30,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrder));
             this.panelRight_VAA = new System.Windows.Forms.Panel();
-            this.buttonGoBack_VAA = new System.Windows.Forms.Button();
             this.buttonEnd_VAA = new System.Windows.Forms.Button();
             this.panelFill_VAA = new System.Windows.Forms.Panel();
             this.labelAdress_VAA = new System.Windows.Forms.Label();
@@ -61,8 +61,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // panelRight_VAA
             // 
-            this.panelRight_VAA.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelRight_VAA.Controls.Add(this.buttonGoBack_VAA);
+            this.panelRight_VAA.BackColor = System.Drawing.SystemColors.Control;
+            this.panelRight_VAA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelRight_VAA.BackgroundImage")));
             this.panelRight_VAA.Controls.Add(this.buttonEnd_VAA);
             this.panelRight_VAA.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRight_VAA.Location = new System.Drawing.Point(933, 0);
@@ -70,23 +70,11 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelRight_VAA.Size = new System.Drawing.Size(200, 549);
             this.panelRight_VAA.TabIndex = 0;
             // 
-            // buttonGoBack_VAA
-            // 
-            this.buttonGoBack_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonGoBack_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonGoBack_VAA.Location = new System.Drawing.Point(29, 12);
-            this.buttonGoBack_VAA.Name = "buttonGoBack_VAA";
-            this.buttonGoBack_VAA.Size = new System.Drawing.Size(148, 64);
-            this.buttonGoBack_VAA.TabIndex = 1;
-            this.buttonGoBack_VAA.Text = "Вернуться на предыдущую страницу";
-            this.toolTipHelper.SetToolTip(this.buttonGoBack_VAA, "Нажмите, чтобы вырнуться в главное меню, введённые данные не сохранятся");
-            this.buttonGoBack_VAA.UseVisualStyleBackColor = true;
-            this.buttonGoBack_VAA.Click += new System.EventHandler(this.buttonGoBack_VAA_Click);
-            // 
             // buttonEnd_VAA
             // 
+            this.buttonEnd_VAA.BackColor = System.Drawing.Color.White;
             this.buttonEnd_VAA.Enabled = false;
-            this.buttonEnd_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonEnd_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEnd_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnd_VAA.Location = new System.Drawing.Point(15, 477);
             this.buttonEnd_VAA.Name = "buttonEnd_VAA";
@@ -95,8 +83,10 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonEnd_VAA.Text = "Сохранить данные";
             this.toolTipHelper.SetToolTip(this.buttonEnd_VAA, "Нажмите, чтобы сохранить ваши данные в таблицу и \r\nперейти к оформлению вашего за" +
         "каза ");
-            this.buttonEnd_VAA.UseVisualStyleBackColor = true;
+            this.buttonEnd_VAA.UseVisualStyleBackColor = false;
             this.buttonEnd_VAA.Click += new System.EventHandler(this.buttonNext_VAA_Click);
+            this.buttonEnd_VAA.MouseEnter += new System.EventHandler(this.buttonEnd_VAA_MouseEnter);
+            this.buttonEnd_VAA.MouseLeave += new System.EventHandler(this.buttonEnd_VAA_MouseLeave);
             // 
             // panelFill_VAA
             // 
@@ -176,7 +166,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // comboBoxTowns_VAA
             // 
+            this.comboBoxTowns_VAA.BackColor = System.Drawing.SystemColors.Window;
             this.comboBoxTowns_VAA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTowns_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxTowns_VAA.FormattingEnabled = true;
             this.comboBoxTowns_VAA.Items.AddRange(new object[] {
             "Абакан",
@@ -601,6 +593,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // textBoxExplanation_VAA
             // 
+            this.textBoxExplanation_VAA.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxExplanation_VAA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxExplanation_VAA.Font = new System.Drawing.Font("TT Travels Bold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxExplanation_VAA.Location = new System.Drawing.Point(0, 0);
@@ -630,7 +623,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.Controls.Add(this.panelRight_VAA);
             this.Name = "FormOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ОКНО РЕГИСТРАЦИИ";
+            this.Text = "ДАННЫЕ ПОЛЬЗОВАТЕЛЯ";
             this.panelRight_VAA.ResumeLayout(false);
             this.panelFill_VAA.ResumeLayout(false);
             this.panelFill_VAA.PerformLayout();
@@ -660,7 +653,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.CheckBox checkBoxCondition_VAA;
         private System.Windows.Forms.Label labelTowns_VAA;
         private System.Windows.Forms.ComboBox comboBoxTowns_VAA;
-        private System.Windows.Forms.Button buttonGoBack_VAA;
         private System.Windows.Forms.Label labelPostIndex_VAA;
         private System.Windows.Forms.TextBox textBoxPostIndex_VAA;
         private System.Windows.Forms.Label labelAdress_VAA;

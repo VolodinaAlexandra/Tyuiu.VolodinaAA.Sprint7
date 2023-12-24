@@ -58,13 +58,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonOK_VAA
             // 
+            this.buttonOK_VAA.BackColor = System.Drawing.Color.White;
             this.buttonOK_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOK_VAA.Location = new System.Drawing.Point(421, 207);
             this.buttonOK_VAA.Name = "buttonOK_VAA";
             this.buttonOK_VAA.Size = new System.Drawing.Size(80, 33);
             this.buttonOK_VAA.TabIndex = 2;
             this.buttonOK_VAA.Text = "OK";
-            this.buttonOK_VAA.UseVisualStyleBackColor = true;
+            this.buttonOK_VAA.UseVisualStyleBackColor = false;
             this.buttonOK_VAA.Click += new System.EventHandler(this.buttonOK_VAA_Click);
             // 
             // FormAbout

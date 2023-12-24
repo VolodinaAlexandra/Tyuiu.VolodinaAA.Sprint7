@@ -60,5 +60,25 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             }
             chartStatistic_VAA.Series.Add(salesSeries);
         }
+
+        private void buttonSales_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonSales_VAA.BackColor = Color.Green;
+        }
+
+        private void buttonSales_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonSales_VAA.BackColor = Color.White;
+        }
+
+        private void buttonPopularThings_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonPopularThings_VAA.BackColor = Color.LightGreen;
+        }
+
+        private void buttonPopularThings_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonPopularThings_VAA.BackColor = Color.White;
+        }
     }
 }

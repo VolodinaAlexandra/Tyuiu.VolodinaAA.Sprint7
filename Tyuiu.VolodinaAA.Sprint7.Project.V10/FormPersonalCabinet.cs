@@ -117,5 +117,45 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         {
             dateTimePickerOrderEnd_VAA.MinDate = DateTime.Today;
         }
+
+        private void buttonNext_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonNext_VAA.BackColor = Color.LimeGreen;
+        }
+
+        private void buttonNext_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonNext_VAA.BackColor = Color.White;
+        }
+
+        private void buttonPrevious_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonPrevious_VAA.BackColor = Color.LimeGreen;
+        }
+
+        private void buttonPrevious_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonPrevious_VAA.BackColor = Color.White;
+        }
+
+        private void buttonItogo_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonItogo_VAA.BackColor = Color.Green;
+        }
+
+        private void buttonItogo_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonItogo_VAA.BackColor = Color.White;
+        }
+
+        private void buttonEndofOrder_VAA_MouseEnter(object sender, EventArgs e)
+        {
+            buttonEndofOrder_VAA.BackColor = Color.Coral;
+        }
+
+        private void buttonEndofOrder_VAA_MouseLeave(object sender, EventArgs e)
+        {
+            buttonEndofOrder_VAA.BackColor = Color.White;
+        }
     }
 }

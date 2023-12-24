@@ -30,9 +30,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelTop_VAA = new System.Windows.Forms.Panel();
             this.buttonSales_VAA = new System.Windows.Forms.Button();
             this.buttonPopularThings_VAA = new System.Windows.Forms.Button();
@@ -59,6 +59,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // buttonSales_VAA
             // 
             this.buttonSales_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSales_VAA.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonSales_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSales_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSales_VAA.Location = new System.Drawing.Point(659, 63);
@@ -67,12 +68,15 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonSales_VAA.TabIndex = 3;
             this.buttonSales_VAA.Text = "Продажи";
             this.toolTip1.SetToolTip(this.buttonSales_VAA, "Нажмите, чтобы увидеть продажи за 2023 год");
-            this.buttonSales_VAA.UseVisualStyleBackColor = true;
+            this.buttonSales_VAA.UseVisualStyleBackColor = false;
             this.buttonSales_VAA.Click += new System.EventHandler(this.buttonSales_VAA_Click);
+            this.buttonSales_VAA.MouseEnter += new System.EventHandler(this.buttonSales_VAA_MouseEnter);
+            this.buttonSales_VAA.MouseLeave += new System.EventHandler(this.buttonSales_VAA_MouseLeave);
             // 
             // buttonPopularThings_VAA
             // 
             this.buttonPopularThings_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPopularThings_VAA.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonPopularThings_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPopularThings_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPopularThings_VAA.Location = new System.Drawing.Point(901, 63);
@@ -81,8 +85,10 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonPopularThings_VAA.TabIndex = 1;
             this.buttonPopularThings_VAA.Text = "Товары\r\n";
             this.toolTip1.SetToolTip(this.buttonPopularThings_VAA, "Нажмите, чтобы увидеть рейтинг проданных товаров за 2023 год");
-            this.buttonPopularThings_VAA.UseVisualStyleBackColor = true;
+            this.buttonPopularThings_VAA.UseVisualStyleBackColor = false;
             this.buttonPopularThings_VAA.Click += new System.EventHandler(this.buttonPopularThings_VAA_Click);
+            this.buttonPopularThings_VAA.MouseEnter += new System.EventHandler(this.buttonPopularThings_VAA_MouseEnter);
+            this.buttonPopularThings_VAA.MouseLeave += new System.EventHandler(this.buttonPopularThings_VAA_MouseLeave);
             // 
             // labelTask_VAA
             // 
@@ -106,20 +112,20 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // chartStatistic_VAA
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartStatistic_VAA.ChartAreas.Add(chartArea1);
+            chartArea4.Name = "ChartArea1";
+            this.chartStatistic_VAA.ChartAreas.Add(chartArea4);
             this.chartStatistic_VAA.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chartStatistic_VAA.Legends.Add(legend1);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.chartStatistic_VAA.Legends.Add(legend4);
             this.chartStatistic_VAA.Location = new System.Drawing.Point(0, 0);
             this.chartStatistic_VAA.Name = "chartStatistic_VAA";
-            this.chartStatistic_VAA.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "SeriesChartStatistic";
-            this.chartStatistic_VAA.Series.Add(series1);
+            this.chartStatistic_VAA.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Legend = "Legend1";
+            series4.Name = "SeriesChartStatistic";
+            this.chartStatistic_VAA.Series.Add(series4);
             this.chartStatistic_VAA.Size = new System.Drawing.Size(1146, 535);
             this.chartStatistic_VAA.TabIndex = 0;
             this.chartStatistic_VAA.Text = "chart1";

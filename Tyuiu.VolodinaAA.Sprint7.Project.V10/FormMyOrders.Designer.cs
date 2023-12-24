@@ -29,6 +29,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMyOrders));
             this.labelListOfOrders_VAA = new System.Windows.Forms.Label();
             this.labelTask_VAA = new System.Windows.Forms.Label();
             this.labelTotalAmount_VAA = new System.Windows.Forms.Label();
@@ -50,10 +51,10 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.labelListOfOrders_VAA.AutoSize = true;
             this.labelListOfOrders_VAA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelListOfOrders_VAA.Font = new System.Drawing.Font("TT Travels Regular", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelListOfOrders_VAA.Font = new System.Drawing.Font("TT Travels Regular", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelListOfOrders_VAA.Location = new System.Drawing.Point(0, 0);
             this.labelListOfOrders_VAA.Name = "labelListOfOrders_VAA";
-            this.labelListOfOrders_VAA.Size = new System.Drawing.Size(0, 33);
+            this.labelListOfOrders_VAA.Size = new System.Drawing.Size(0, 20);
             this.labelListOfOrders_VAA.TabIndex = 0;
             // 
             // labelTask_VAA
@@ -72,7 +73,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelTotalAmount_VAA.AutoSize = true;
             this.labelTotalAmount_VAA.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelTotalAmount_VAA.Font = new System.Drawing.Font("TT Travels Regular", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTotalAmount_VAA.Location = new System.Drawing.Point(483, 0);
+            this.labelTotalAmount_VAA.Location = new System.Drawing.Point(624, 0);
             this.labelTotalAmount_VAA.Name = "labelTotalAmount_VAA";
             this.labelTotalAmount_VAA.Size = new System.Drawing.Size(92, 33);
             this.labelTotalAmount_VAA.TabIndex = 2;
@@ -80,30 +81,33 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // panelTop_VAA
             // 
+            this.panelTop_VAA.BackColor = System.Drawing.Color.White;
             this.panelTop_VAA.Controls.Add(this.labelTask_VAA);
             this.panelTop_VAA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_VAA.Location = new System.Drawing.Point(0, 0);
             this.panelTop_VAA.Name = "panelTop_VAA";
-            this.panelTop_VAA.Size = new System.Drawing.Size(575, 43);
+            this.panelTop_VAA.Size = new System.Drawing.Size(716, 43);
             this.panelTop_VAA.TabIndex = 3;
             // 
             // panelTop2_VAA
             // 
+            this.panelTop2_VAA.BackColor = System.Drawing.Color.White;
             this.panelTop2_VAA.Controls.Add(this.labelListOfOrders_VAA);
             this.panelTop2_VAA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop2_VAA.Location = new System.Drawing.Point(0, 43);
             this.panelTop2_VAA.Name = "panelTop2_VAA";
-            this.panelTop2_VAA.Size = new System.Drawing.Size(575, 100);
+            this.panelTop2_VAA.Size = new System.Drawing.Size(716, 100);
             this.panelTop2_VAA.TabIndex = 4;
             // 
             // panelTop3_VAA
             // 
+            this.panelTop3_VAA.BackColor = System.Drawing.Color.White;
             this.panelTop3_VAA.Controls.Add(this.labelPrice_VAA);
             this.panelTop3_VAA.Controls.Add(this.labelTotalAmount_VAA);
             this.panelTop3_VAA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop3_VAA.Location = new System.Drawing.Point(0, 143);
             this.panelTop3_VAA.Name = "panelTop3_VAA";
-            this.panelTop3_VAA.Size = new System.Drawing.Size(575, 52);
+            this.panelTop3_VAA.Size = new System.Drawing.Size(716, 52);
             this.panelTop3_VAA.TabIndex = 5;
             // 
             // labelPrice_VAA
@@ -119,12 +123,13 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // panelTop4_VAA
             // 
+            this.panelTop4_VAA.BackColor = System.Drawing.Color.White;
             this.panelTop4_VAA.Controls.Add(this.labelDateTimeValue_VAA);
             this.panelTop4_VAA.Controls.Add(this.labelDate_VAA);
             this.panelTop4_VAA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop4_VAA.Location = new System.Drawing.Point(0, 195);
             this.panelTop4_VAA.Name = "panelTop4_VAA";
-            this.panelTop4_VAA.Size = new System.Drawing.Size(575, 100);
+            this.panelTop4_VAA.Size = new System.Drawing.Size(716, 100);
             this.panelTop4_VAA.TabIndex = 6;
             // 
             // labelDateTimeValue_VAA
@@ -151,20 +156,26 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonGoToMenu_VAA
             // 
+            this.buttonGoToMenu_VAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.buttonGoToMenu_VAA.BackColor = System.Drawing.Color.White;
+            this.buttonGoToMenu_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGoToMenu_VAA.Font = new System.Drawing.Font("TT Travels Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonGoToMenu_VAA.Location = new System.Drawing.Point(130, 308);
+            this.buttonGoToMenu_VAA.Location = new System.Drawing.Point(184, 337);
             this.buttonGoToMenu_VAA.Name = "buttonGoToMenu_VAA";
             this.buttonGoToMenu_VAA.Size = new System.Drawing.Size(319, 38);
             this.buttonGoToMenu_VAA.TabIndex = 7;
-            this.buttonGoToMenu_VAA.Text = "Перейти в главное меню";
-            this.buttonGoToMenu_VAA.UseVisualStyleBackColor = true;
+            this.buttonGoToMenu_VAA.Text = "Сохранить данные в файл";
+            this.buttonGoToMenu_VAA.UseVisualStyleBackColor = false;
             this.buttonGoToMenu_VAA.Click += new System.EventHandler(this.buttonGoToMenu_VAA_Click);
+            this.buttonGoToMenu_VAA.MouseEnter += new System.EventHandler(this.buttonGoToMenu_VAA_MouseEnter);
+            this.buttonGoToMenu_VAA.MouseLeave += new System.EventHandler(this.buttonGoToMenu_VAA_MouseLeave);
             // 
             // FormMyOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 358);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(716, 424);
             this.Controls.Add(this.buttonGoToMenu_VAA);
             this.Controls.Add(this.panelTop4_VAA);
             this.Controls.Add(this.panelTop3_VAA);
@@ -172,7 +183,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.Controls.Add(this.panelTop_VAA);
             this.Name = "FormMyOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "МОИ ЗАКАЗЫ";
+            this.Text = "МОЙ ЗАКАЗ";
             this.panelTop_VAA.ResumeLayout(false);
             this.panelTop_VAA.PerformLayout();
             this.panelTop2_VAA.ResumeLayout(false);
