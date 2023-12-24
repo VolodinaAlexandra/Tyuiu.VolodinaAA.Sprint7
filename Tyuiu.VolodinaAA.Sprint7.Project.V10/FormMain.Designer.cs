@@ -32,7 +32,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.components = new System.ComponentModel.Container();
             this.buttonBuy_VAA = new System.Windows.Forms.Button();
             this.panelRight_VAA = new System.Windows.Forms.Panel();
-            this.buttonOrder_VAA = new System.Windows.Forms.Button();
+            this.buttonMyOrders_VAA = new System.Windows.Forms.Button();
             this.buttonAuthorise_VAA = new System.Windows.Forms.Button();
             this.buttonStatistic_VAA = new System.Windows.Forms.Button();
             this.buttonInstruction_VAA = new System.Windows.Forms.Button();
@@ -63,13 +63,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonBuy_VAA.Size = new System.Drawing.Size(171, 91);
             this.buttonBuy_VAA.TabIndex = 0;
             this.buttonBuy_VAA.Text = "Сделать заказ";
+            this.toolTipHelper_VAA.SetToolTip(this.buttonBuy_VAA, "Нажмите, чтобы сделать заказ");
             this.buttonBuy_VAA.UseVisualStyleBackColor = false;
             this.buttonBuy_VAA.Click += new System.EventHandler(this.buttonBuy_VAA_Click);
             // 
             // panelRight_VAA
             // 
             this.panelRight_VAA.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelRight_VAA.Controls.Add(this.buttonOrder_VAA);
+            this.panelRight_VAA.Controls.Add(this.buttonMyOrders_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonAuthorise_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonStatistic_VAA);
             this.panelRight_VAA.Controls.Add(this.buttonInstruction_VAA);
@@ -81,17 +82,18 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.panelRight_VAA.Size = new System.Drawing.Size(200, 549);
             this.panelRight_VAA.TabIndex = 1;
             // 
-            // buttonOrder_VAA
+            // buttonMyOrders_VAA
             // 
-            this.buttonOrder_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrder_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOrder_VAA.Location = new System.Drawing.Point(17, 340);
-            this.buttonOrder_VAA.Name = "buttonOrder_VAA";
-            this.buttonOrder_VAA.Size = new System.Drawing.Size(171, 39);
-            this.buttonOrder_VAA.TabIndex = 4;
-            this.buttonOrder_VAA.Text = "Мой заказ";
-            this.buttonOrder_VAA.UseVisualStyleBackColor = true;
-            this.buttonOrder_VAA.Click += new System.EventHandler(this.buttonOrder_VAA_Click);
+            this.buttonMyOrders_VAA.Enabled = false;
+            this.buttonMyOrders_VAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMyOrders_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMyOrders_VAA.Location = new System.Drawing.Point(17, 340);
+            this.buttonMyOrders_VAA.Name = "buttonMyOrders_VAA";
+            this.buttonMyOrders_VAA.Size = new System.Drawing.Size(171, 39);
+            this.buttonMyOrders_VAA.TabIndex = 4;
+            this.buttonMyOrders_VAA.Text = "Мои заказы";
+            this.buttonMyOrders_VAA.UseVisualStyleBackColor = true;
+            this.buttonMyOrders_VAA.Click += new System.EventHandler(this.buttonOrder_VAA_Click);
             // 
             // buttonAuthorise_VAA
             // 
@@ -116,6 +118,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonStatistic_VAA.Size = new System.Drawing.Size(171, 60);
             this.buttonStatistic_VAA.TabIndex = 2;
             this.buttonStatistic_VAA.Text = "Данные о продажах";
+            this.toolTipHelper_VAA.SetToolTip(this.buttonStatistic_VAA, "Нажмите, чтобы увидеть данные о продажах за 2023 год");
             this.buttonStatistic_VAA.UseVisualStyleBackColor = true;
             this.buttonStatistic_VAA.Click += new System.EventHandler(this.buttonStatistic_VAA_Click);
             // 
@@ -128,6 +131,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonInstruction_VAA.Size = new System.Drawing.Size(171, 42);
             this.buttonInstruction_VAA.TabIndex = 1;
             this.buttonInstruction_VAA.Text = "Руководство к пользованию";
+            this.toolTipHelper_VAA.SetToolTip(this.buttonInstruction_VAA, "Нажмите, если не понимаете как работает приложение, тут вам все объяснят");
             this.buttonInstruction_VAA.UseVisualStyleBackColor = true;
             this.buttonInstruction_VAA.Click += new System.EventHandler(this.buttonInstruction_VAA_Click);
             // 
@@ -140,6 +144,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonInformation_VAA.Size = new System.Drawing.Size(171, 38);
             this.buttonInformation_VAA.TabIndex = 1;
             this.buttonInformation_VAA.Text = "О программе";
+            this.toolTipHelper_VAA.SetToolTip(this.buttonInformation_VAA, "Нажмите, чтобы увидеть информацию о программе и её разработчике");
             this.buttonInformation_VAA.UseVisualStyleBackColor = true;
             this.buttonInformation_VAA.Click += new System.EventHandler(this.buttonInformation_VAA_Click);
             // 
@@ -270,7 +275,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.Button buttonPreviousPicture_VAA;
         private System.Windows.Forms.Label labelCapture_VAA;
         private System.Windows.Forms.Label labelPrice_VAA;
-        private System.Windows.Forms.Button buttonOrder_VAA;
+        private System.Windows.Forms.Button buttonMyOrders_VAA;
     }
 }
 

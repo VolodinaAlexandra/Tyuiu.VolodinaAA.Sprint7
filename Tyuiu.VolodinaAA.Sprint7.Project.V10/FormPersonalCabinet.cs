@@ -18,6 +18,14 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private List<string> captions = new List<string>();
         private List<string> price = new List<string>();
         private List<string> selectedItems = new List<string>();
+        public string TotalAmount
+        {
+            get { return textBoxItogo_VAA.Text; }
+        }
+        public string DateTimeValue
+        {
+            get { return dateTimePickerOrderEnd_VAA.Text; }
+        }
         public FormPersonalCabinet()
         {
             InitializeComponent();
@@ -98,10 +106,16 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             {
                 selectedItems.Add(item);
             }
+            
 
-            FormMyOrders mo = new FormMyOrders(selectedItems);
+            FormMyOrders mo = new FormMyOrders(selectedItems,TotalAmount,DateTimeValue);
             mo.Show();
             
+        }
+
+        private void FormPersonalCabinet_Load(object sender, EventArgs e)
+        {
+            dateTimePickerOrderEnd_VAA.MinDate = DateTime.Today;
         }
     }
 }

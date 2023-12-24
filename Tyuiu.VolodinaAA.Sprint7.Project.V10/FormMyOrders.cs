@@ -12,16 +12,23 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
 {
     public partial class FormMyOrders : Form
     {
-        private List<string> selectedItems;
-        public FormMyOrders(List<string> selectedItems)
+        
+        public FormMyOrders(List<string> selectedItems,string TotalAmount, string DateTimeValue)
         {
             InitializeComponent();
-            this.selectedItems = selectedItems;
+            labelTotalAmount_VAA.Text = TotalAmount;
+            labelDateTimeValue_VAA.Text = DateTimeValue;
+            foreach (string item in selectedItems)
+            {
+                labelListOfOrders_VAA.Text += item + ",\n";
+            }
         }
 
-        private void FormMyOrders_Load(object sender, EventArgs e)
+        private void buttonGoToMenu_VAA_Click(object sender, EventArgs e)
         {
-            labelListOfOrders_VAA.Text = string.Join("\n", selectedItems);
+            FormMain fm = new FormMain();
+            fm.ShowDialog();
+            this.Hide();
         }
     }
 }

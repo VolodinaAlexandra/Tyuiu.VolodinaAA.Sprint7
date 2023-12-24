@@ -29,6 +29,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelRight_VAA = new System.Windows.Forms.Panel();
             this.buttonGoBack_VAA = new System.Windows.Forms.Button();
             this.buttonEnd_VAA = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.textBoxExplanation_VAA = new System.Windows.Forms.TextBox();
             this.openFileDialogNext_VAA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogCSV_VAA = new System.Windows.Forms.SaveFileDialog();
+            this.toolTipHelper = new System.Windows.Forms.ToolTip(this.components);
             this.panelRight_VAA.SuspendLayout();
             this.panelFill_VAA.SuspendLayout();
             this.panelTop_VAA.SuspendLayout();
@@ -77,6 +79,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonGoBack_VAA.Size = new System.Drawing.Size(148, 64);
             this.buttonGoBack_VAA.TabIndex = 1;
             this.buttonGoBack_VAA.Text = "Вернуться на предыдущую страницу";
+            this.toolTipHelper.SetToolTip(this.buttonGoBack_VAA, "Нажмите, чтобы вырнуться в главное меню, введённые данные не сохранятся");
             this.buttonGoBack_VAA.UseVisualStyleBackColor = true;
             this.buttonGoBack_VAA.Click += new System.EventHandler(this.buttonGoBack_VAA_Click);
             // 
@@ -90,6 +93,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.buttonEnd_VAA.Size = new System.Drawing.Size(171, 53);
             this.buttonEnd_VAA.TabIndex = 0;
             this.buttonEnd_VAA.Text = "Сохранить данные";
+            this.toolTipHelper.SetToolTip(this.buttonEnd_VAA, "Нажмите, чтобы сохранить ваши данные в таблицу и \r\nперейти к оформлению вашего за" +
+        "каза ");
             this.buttonEnd_VAA.UseVisualStyleBackColor = true;
             this.buttonEnd_VAA.Click += new System.EventHandler(this.buttonNext_VAA_Click);
             // 
@@ -127,6 +132,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelAdress_VAA.Size = new System.Drawing.Size(212, 48);
             this.labelAdress_VAA.TabIndex = 16;
             this.labelAdress_VAA.Text = "Введите ваш \r\nадрес проживания:";
+            this.toolTipHelper.SetToolTip(this.labelAdress_VAA, "Введите ваш адрес в формате:\r\nул.Мельникайте,70 кв.100");
             // 
             // textBoxAdress_VAA
             // 
@@ -145,6 +151,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelPostIndex_VAA.Size = new System.Drawing.Size(191, 48);
             this.labelPostIndex_VAA.TabIndex = 13;
             this.labelPostIndex_VAA.Text = "Введите ваш \r\nпочтовый индекс:\r\n";
+            this.toolTipHelper.SetToolTip(this.labelPostIndex_VAA, "Максимальная длина 6 символов, доступны только цифры");
             // 
             // textBoxPostIndex_VAA
             // 
@@ -163,6 +170,9 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelTowns_VAA.Size = new System.Drawing.Size(140, 72);
             this.labelTowns_VAA.TabIndex = 11;
             this.labelTowns_VAA.Text = "Выберите \r\nнаселённый\r\nпункт:";
+            this.toolTipHelper.SetToolTip(this.labelTowns_VAA, "Нажмите стрелочку вниз, пролистайте до нужного вам города и выберите двойным щелч" +
+        "ком мыши по нему\r\nГорода расположены в алфавитном порядке, нет малых населёленны" +
+        "х пунктов");
             // 
             // comboBoxTowns_VAA
             // 
@@ -505,6 +515,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.checkBoxCondition_VAA.Size = new System.Drawing.Size(431, 21);
             this.checkBoxCondition_VAA.TabIndex = 9;
             this.checkBoxCondition_VAA.Text = "Вы согласны на обработку ваших персональных данных\r\n";
+            this.toolTipHelper.SetToolTip(this.checkBoxCondition_VAA, "Обязательное условие для продолжения заказа");
             this.checkBoxCondition_VAA.UseVisualStyleBackColor = true;
             this.checkBoxCondition_VAA.CheckedChanged += new System.EventHandler(this.checkBoxCondition_VAA_CheckedChanged);
             // 
@@ -517,6 +528,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.labelPhoneNumber_VAA.Size = new System.Drawing.Size(185, 48);
             this.labelPhoneNumber_VAA.TabIndex = 8;
             this.labelPhoneNumber_VAA.Text = "Введите ваш \r\nномер телефона:";
+            this.toolTipHelper.SetToolTip(this.labelPhoneNumber_VAA, "Нажмите в самое начало строки для ввода и смело вбивайте ваш номер");
             // 
             // maskedTextBoxPhoneNumber_VAA
             // 
@@ -603,6 +615,12 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             this.openFileDialogNext_VAA.FileName = "openFileDialog1";
             // 
+            // toolTipHelper
+            // 
+            this.toolTipHelper.IsBalloon = true;
+            this.toolTipHelper.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipHelper.ToolTipTitle = "Подсказка";
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -647,5 +665,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.TextBox textBoxPostIndex_VAA;
         private System.Windows.Forms.Label labelAdress_VAA;
         private System.Windows.Forms.TextBox textBoxAdress_VAA;
+        private System.Windows.Forms.ToolTip toolTipHelper;
     }
 }

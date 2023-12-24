@@ -29,6 +29,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelRight_VAA = new System.Windows.Forms.Panel();
             this.panelFill_VAA = new System.Windows.Forms.Panel();
             this.buttonEndofOrder_VAA = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.pictureBoxImages_VAA = new System.Windows.Forms.PictureBox();
             this.labelDate_VAA = new System.Windows.Forms.Label();
             this.dateTimePickerOrderEnd_VAA = new System.Windows.Forms.DateTimePicker();
+            this.toolTipHelper = new System.Windows.Forms.ToolTip(this.components);
             this.panelFill_VAA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImages_VAA)).BeginInit();
             this.SuspendLayout();
@@ -78,21 +80,25 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonEndofOrder_VAA
             // 
+            this.buttonEndofOrder_VAA.Font = new System.Drawing.Font("TT Travels Regular", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEndofOrder_VAA.Location = new System.Drawing.Point(452, 405);
             this.buttonEndofOrder_VAA.Name = "buttonEndofOrder_VAA";
             this.buttonEndofOrder_VAA.Size = new System.Drawing.Size(226, 36);
             this.buttonEndofOrder_VAA.TabIndex = 12;
             this.buttonEndofOrder_VAA.Text = "Заказать";
+            this.toolTipHelper.SetToolTip(this.buttonEndofOrder_VAA, "Нажмите, чтобы заказать выбранные позиции и перейти в меню заказа");
             this.buttonEndofOrder_VAA.UseVisualStyleBackColor = true;
             this.buttonEndofOrder_VAA.Click += new System.EventHandler(this.buttonEndofOrder_VAA_Click);
             // 
             // buttonItogo_VAA
             // 
+            this.buttonItogo_VAA.Font = new System.Drawing.Font("TT Travels Regular", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonItogo_VAA.Location = new System.Drawing.Point(572, 356);
             this.buttonItogo_VAA.Name = "buttonItogo_VAA";
             this.buttonItogo_VAA.Size = new System.Drawing.Size(106, 24);
             this.buttonItogo_VAA.TabIndex = 11;
             this.buttonItogo_VAA.Text = "Рассчитать";
+            this.toolTipHelper.SetToolTip(this.buttonItogo_VAA, "Нажмите, чтобы рассчитать итоговую сумму заказа");
             this.buttonItogo_VAA.UseVisualStyleBackColor = true;
             this.buttonItogo_VAA.Click += new System.EventHandler(this.buttonItogo_VAA_Click);
             // 
@@ -130,6 +136,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.checkedListBoxItems_VAA.Name = "checkedListBoxItems_VAA";
             this.checkedListBoxItems_VAA.Size = new System.Drawing.Size(335, 124);
             this.checkedListBoxItems_VAA.TabIndex = 8;
+            this.toolTipHelper.SetToolTip(this.checkedListBoxItems_VAA, "Выберите понравившиеся игрушки и поставьте галочку двойным щелчком по квадрату");
             // 
             // labelCapture_VAA
             // 
@@ -153,6 +160,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonNext_VAA
             // 
+            this.buttonNext_VAA.Font = new System.Drawing.Font("TT Travels ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNext_VAA.Location = new System.Drawing.Point(256, 478);
             this.buttonNext_VAA.Name = "buttonNext_VAA";
             this.buttonNext_VAA.Size = new System.Drawing.Size(157, 47);
@@ -163,6 +171,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // buttonPrevious_VAA
             // 
+            this.buttonPrevious_VAA.Font = new System.Drawing.Font("TT Travels ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPrevious_VAA.Location = new System.Drawing.Point(103, 478);
             this.buttonPrevious_VAA.Name = "buttonPrevious_VAA";
             this.buttonPrevious_VAA.Size = new System.Drawing.Size(156, 47);
@@ -196,6 +205,13 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.dateTimePickerOrderEnd_VAA.Name = "dateTimePickerOrderEnd_VAA";
             this.dateTimePickerOrderEnd_VAA.Size = new System.Drawing.Size(328, 22);
             this.dateTimePickerOrderEnd_VAA.TabIndex = 0;
+            this.toolTipHelper.SetToolTip(this.dateTimePickerOrderEnd_VAA, "Нажмите на стрелку вниз, чтобы выбрать желаемую дату исполнения");
+            // 
+            // toolTipHelper
+            // 
+            this.toolTipHelper.IsBalloon = true;
+            this.toolTipHelper.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipHelper.ToolTipTitle = "Подсказка";
             // 
             // FormPersonalCabinet
             // 
@@ -207,6 +223,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             this.Name = "FormPersonalCabinet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "МЕНЮ ЗАКАЗА";
+            this.Load += new System.EventHandler(this.FormPersonalCabinet_Load);
             this.panelFill_VAA.ResumeLayout(false);
             this.panelFill_VAA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImages_VAA)).EndInit();
@@ -230,5 +247,6 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         private System.Windows.Forms.TextBox textBoxItogo_VAA;
         private System.Windows.Forms.Button buttonItogo_VAA;
         private System.Windows.Forms.Button buttonEndofOrder_VAA;
+        private System.Windows.Forms.ToolTip toolTipHelper;
     }
 }

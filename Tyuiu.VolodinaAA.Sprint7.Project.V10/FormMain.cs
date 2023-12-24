@@ -80,6 +80,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
         {
             FormOrder formOrder = new FormOrder();
             formOrder.ShowDialog();
+            buttonMyOrders_VAA.Enabled = true;
         }
 
         private void buttonNextPicture_VAA_Click(object sender, EventArgs e)
@@ -108,8 +109,8 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
 
         private void buttonOrder_VAA_Click(object sender, EventArgs e)
         {
-            FormPersonalCabinet pc = new FormPersonalCabinet();
-            pc.ShowDialog();
+            //FormMyOrders mo = new FormMyOrders();
+            //mo.ShowDialog();
         }
 
         
