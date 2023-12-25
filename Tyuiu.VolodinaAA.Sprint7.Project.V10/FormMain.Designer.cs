@@ -186,8 +186,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // panelTop_VAA
             // 
-            this.panelTop_VAA.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelTop_VAA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelTop_VAA.BackgroundImage")));
+            this.panelTop_VAA.BackColor = System.Drawing.Color.White;
             this.panelTop_VAA.Controls.Add(this.labelTop_VAA);
             this.panelTop_VAA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_VAA.Location = new System.Drawing.Point(0, 0);
@@ -249,7 +248,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // panelFill_VAA
             // 
-            this.panelFill_VAA.BackColor = System.Drawing.SystemColors.Control;
+            this.panelFill_VAA.BackColor = System.Drawing.Color.White;
             this.panelFill_VAA.Controls.Add(this.pictureBoxToys_VAA);
             this.panelFill_VAA.Controls.Add(this.labelCapture_VAA);
             this.panelFill_VAA.Controls.Add(this.labelPrice_VAA);

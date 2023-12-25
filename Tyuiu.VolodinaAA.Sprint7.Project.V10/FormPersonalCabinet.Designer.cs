@@ -51,7 +51,7 @@ namespace Tyuiu.VolodinaAA.Sprint7.Project.V10
             // 
             // panelFill_VAA
             // 
-            this.panelFill_VAA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFill_VAA.BackgroundImage")));
+            this.panelFill_VAA.BackColor = System.Drawing.SystemColors.Control;
             this.panelFill_VAA.Controls.Add(this.buttonEndofOrder_VAA);
             this.panelFill_VAA.Controls.Add(this.buttonItogo_VAA);
             this.panelFill_VAA.Controls.Add(this.labelItogo_VAA);
